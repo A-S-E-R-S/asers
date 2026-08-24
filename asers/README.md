@@ -1,47 +1,60 @@
-# OpenNext Starter
+# asers.org
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Website for the **American Science and Engineering Research Symposium**, the national
+umbrella org for state chapters like [NJSRS](https://njsrs.org) (New Jersey).
 
-## Getting Started
-
-Read the documentation at https://opennext.js.org/cloudflare.
+Built with Next.js (App Router) and deployed to **Cloudflare Workers** via
+[OpenNext](https://opennext.js.org/cloudflare).
 
 ## Develop
 
-Run the Next.js development server:
-
 ```bash
-npm run dev
-# or similar package manager command
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Preview
-
-Preview the application locally on the Cloudflare runtime:
-
-```bash
-npm run preview
-# or similar package manager command
+npm install
+npm run dev        # Next dev server at http://localhost:3000
+npm run preview    # build + run in the actual Workers runtime locally
 ```
 
 ## Deploy
 
-Deploy the application to Cloudflare:
-
 ```bash
-npm run deploy
-# or similar package manager command
+npx wrangler login   # first time only
+npm run deploy       # builds with OpenNext and deploys the Worker
 ```
 
-## Learn More
+With no routes configured, this deploys to `asers.<account>.workers.dev`.
 
-To learn more about Next.js, take a look at the following resources:
+### Hooking up asers.org
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Add the `asers.org` zone to the Cloudflare account (Dashboard → **Add a domain**)
+   and point the domain's nameservers at Cloudflare.
+2. Uncomment the `routes` block in `wrangler.jsonc`.
+3. `npm run deploy` again. Cloudflare provisions DNS + certs for each custom domain
+   automatically.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Chapter subdomains
+
+`nj.asers.org` → **301** → `asers.org/chapters/new-jersey`
+
+How it works:
+
+- [src/data/chapters.ts](src/data/chapters.ts) is the chapter registry (slug,
+  subdomain, name, links). Adding a chapter there automatically creates its page at
+  `/chapters/<slug>`, lists it everywhere, and enables its redirect.
+- [src/middleware.ts](src/middleware.ts) matches the request host and issues the 301.
+- The subdomain must also be listed as a `custom_domain` route in `wrangler.jsonc`
+  so it reaches this Worker.
+
+To add a new chapter (e.g. New York):
+
+1. Add an entry to `src/data/chapters.ts` with `subdomain: "ny"`, `slug: "new-york"`.
+2. Add `{ "pattern": "ny.asers.org", "custom_domain": true }` to `routes` in
+   `wrangler.jsonc`.
+3. `npm run deploy`.
+
+## Content TODOs
+
+- [ ] Photos from past NJSRS fairs → `public/images/` (placeholders are on the
+      homepage and chapter pages)
+- [ ] Real impact numbers → `impactStats` in `src/data/chapters.ts`
+- [ ] Confirm national leadership team → `src/app/about/page.tsx`
+- [ ] Set up `contact@asers.org` mail (referenced in footer/donate/about pages)

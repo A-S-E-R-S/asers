@@ -2,25 +2,30 @@
 
 :root {
 	--background: #ffffff;
-	--foreground: #171717;
+	--foreground: #12151c;
+	--brand: #21388b;
+	--brand-dark: #16265e;
+	--brand-pale: #cfd9f0;
+	--ink-soft: #2b3038;
+	--strip: #f4f5f8;
+	--strip-border: #e4e6ee;
 }
 
 @theme inline {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+	--color-brand: var(--brand);
+	--color-brand-dark: var(--brand-dark);
+	--color-brand-pale: var(--brand-pale);
+	--color-ink-soft: var(--ink-soft);
+	--color-strip: var(--strip);
+	--color-strip-border: var(--strip-border);
+	--font-sans: var(--font-ubuntu);
+	--font-condensed: var(--font-ubuntu-condensed);
 }
 
 body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--font-ubuntu), Arial, Helvetica, sans-serif;
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { chapters, impactStats } from "@/data/chapters";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   return (
@@ -9,36 +10,7 @@ export default function Home() {
         {/* Image column: blue square offset behind the photo */}
         <div className="relative pl-6 pt-6 sm:pl-12 sm:pt-12">
           <div className="absolute left-0 top-0 h-48 w-48 bg-brand sm:h-80 sm:w-80" aria-hidden />
-          {/* TODO: replace the striped placeholder with a real photo from a past
-              NJSRS fair (public/images/) */}
-          <div
-            className="relative flex aspect-[5/4] w-full items-center justify-center"
-            style={{
-              background:
-                "repeating-linear-gradient(135deg, #eceff7 0 12px, #dfe4f2 12px 24px)",
-            }}
-          >
-            <span className="px-3 text-center font-mono text-[11px] uppercase tracking-[0.08em] text-[#5a6480] sm:text-[13px]">
-              feature photo - 1200x960
-            </span>
-          </div>
-          {/* Carousel arrows. TODO: wire up once there is more than one photo */}
-          <div className="relative -mt-px flex">
-            <button
-              type="button"
-              aria-label="Previous photo"
-              className="flex h-14 w-16 cursor-pointer items-center justify-center border-r border-white bg-brand text-[17px] text-white hover:bg-brand-dark sm:h-[62px] sm:w-[78px]"
-            >
-              <span className="h-3 w-3 rotate-45 border-b-2 border-l-2 border-white" aria-hidden="true" />
-            </button>
-            <button
-              type="button"
-              aria-label="Next photo"
-              className="flex h-14 w-16 cursor-pointer items-center justify-center bg-brand text-[17px] text-white hover:bg-brand-dark sm:h-[62px] sm:w-[78px]"
-            >
-              <span className="h-3 w-3 -rotate-[135deg] border-b-2 border-l-2 border-white" aria-hidden="true" />
-            </button>
-          </div>
+          <HeroCarousel />
         </div>
 
         {/* Text column */}

@@ -34,7 +34,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
-				<link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
+				<link rel="icon" href="/images/asers.png" type="image/png" sizes="549x455"></link>
 			</head>
 			<body className={`${ubuntu.variable} ${ubuntuCondensed.variable} antialiased`}>
 				<Nav />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { href: "/chapters", label: "Chapters" },
@@ -16,14 +17,16 @@ export default function Nav() {
 
       {/* Main nav */}
       <div className="flex w-full flex-col gap-5 bg-brand px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between md:gap-10 md:px-[56px] md:py-[26px]">
-        <Link href="/" className="flex min-w-0 items-center gap-3 md:gap-[18px]">
-          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-[3px] border-white md:h-[54px] md:w-[54px]">
-            <span className="h-5 w-5 rounded-full bg-white" />
-          </span>
-          <span className="font-condensed text-[18px] uppercase leading-[1.02] tracking-[0.01em] text-white sm:text-[21px] md:text-[27px]">
-            American Science &amp; Engineering
-            <br />
-            Research Symposium
+        <Link href="/" aria-label="ASERS home" className="flex min-w-0 items-center">
+          <span className="flex h-[92px] w-[190px] items-center sm:h-[100px] sm:w-[215px] md:h-[108px] md:w-[240px]">
+            <Image
+              src="/images/aserswide.png"
+              alt="American Science and Engineering Research Symposium"
+              width={666}
+              height={375}
+              priority
+              className="block h-auto w-full brightness-0 invert"
+            />
           </span>
         </Link>
         <nav className="flex w-full flex-wrap items-center gap-x-4 gap-y-3 sm:gap-x-6 md:w-auto md:gap-[44px]">

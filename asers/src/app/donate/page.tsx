@@ -21,6 +21,18 @@ export default function DonatePage() {
         including regional symposia, national programming, student travel assistance,
         awards, and judging resources.
       </p>
+      <div className="mt-8 grid gap-4 md:grid-cols-3">
+        {[
+          ["Sponsor the organization", "Support regional symposia, national programming, student access, judging, awards, and chapter growth."],
+          ["Sponsor an event or program", "Fund a poster session, awards ceremony, judge training, student networking, travel support, or chapter launch."],
+          ["Sponsor a special award", "Create a named award recognizing strong research in a field connected to your organization's mission."],
+        ].map(([title, body]) => (
+          <div key={title} className="border-2 border-brand p-5">
+            <h2 className="font-condensed text-xl uppercase tracking-tight text-brand">{title}</h2>
+            <p className="mt-3 text-sm font-light leading-[1.7]">{body}</p>
+          </div>
+        ))}
+      </div>
       <section className="mt-8 border-2 border-brand bg-brand px-6 py-7 text-white">
         <p className="font-condensed text-2xl uppercase tracking-wide">Help make Nationals accessible</p>
         <p className="mt-3 font-light leading-[1.7] text-brand-pale">
@@ -49,9 +61,8 @@ export default function DonatePage() {
         ))}
       </div>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">
-        Sponsorship tiers &amp; our sponsors
-      </h2>
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">General sponsorship levels</h2>
+      <p className="mt-3 font-light leading-[1.6]">General sponsorship supports the organization where the need is greatest. Recognition scales with the level of support.</p>
 
       <div className="mt-6 space-y-10">
         {sponsorTiers.map((tier) => (
@@ -115,6 +126,24 @@ export default function DonatePage() {
         …plus the individual families and donors who sponsor our special awards. Thank
         you!
       </p>
+
+      <section className="mt-14">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">Sponsor a special award</h2>
+        <p className="mt-3 font-light leading-[1.6]">Organizations can propose a named award recognizing strong research in an area connected to their mission. Special awards typically begin at $500, with most of the contribution supporting the student prize.</p>
+        <p className="mt-3 font-light leading-[1.6]">Sponsors may help define the scientific focus and nominate qualified judges. ASERS reviews all criteria, judge assignments, and conflicts of interest before judging. Special-award sponsors do not select Grand Award winners.</p>
+        <div className="mt-5 grid gap-2 sm:grid-cols-2">
+          {["Excellence in Artificial Intelligence", "Cancer Research Award", "Environmental Sustainability Award", "Biomedical Innovation Award", "Statistical Methods Award", "Engineering Design Award", "Computational Science Award", "Scientific Communication Award"].map((award) => <div key={award} className="border border-brand-pale px-4 py-3 text-sm font-light">{award}</div>)}
+        </div>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">Sponsor a program or event</h2>
+        <p className="mt-3 font-light leading-[1.6]">We welcome support for specific event components and access programs, including:</p>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+          {["Student Access Sponsor", "Travel Support Sponsor", "School Access Sponsor", "Chapter Launch Sponsor", "Poster Session Sponsor", "Awards Ceremony Sponsor", "Judge Training Sponsor", "Student Networking Sponsor", "Printing or Photography Sponsor", "In-kind venue, food, software, or transportation partner"].map((item) => <li key={item} className="border border-brand-pale px-4 py-3 text-sm font-light">{item}</li>)}
+        </ul>
+        <p className="mt-4 font-light leading-[1.6]">Program sponsors receive recognition connected to what they make possible. Sponsors do not control judge assignments or award selection.</p>
+      </section>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">How to donate</h2>
       <p className="mt-3 font-light leading-[1.6]">

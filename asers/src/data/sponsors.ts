@@ -8,7 +8,7 @@ export type Sponsor = {
 };
 
 export type SponsorTier = {
-  name: "Diamond" | "Gold" | "Silver" | "Bronze";
+  name: "Presenting Sponsor" | "Gold" | "Silver" | "Bronze" | "Supporter";
   amount: string;
   benefits: string;
   // banner gradient colors for the tier header
@@ -20,10 +20,10 @@ export type SponsorTier = {
 
 export const sponsorTiers: SponsorTier[] = [
   {
-    name: "Diamond",
-    amount: "$750+",
+    name: "Presenting Sponsor",
+    amount: "$1,500+",
     benefits:
-      "Website, signage, merchandise, plus special acknowledgment at the awards ceremony",
+      "Top placement, prominent ceremony recognition, optional event table, and a dedicated sponsor feature",
     from: "#9ee8f5",
     to: "#4db6cc",
     text: "#0b3a47",
@@ -37,8 +37,8 @@ export const sponsorTiers: SponsorTier[] = [
   },
   {
     name: "Gold",
-    amount: "$500 – $749",
-    benefits: "Website, signage, and merchandise (t-shirts)",
+    amount: "$750 – $1,499",
+    benefits: "Website, prominent event signage, and awards ceremony recognition",
     from: "#f3d27a",
     to: "#c9982b",
     text: "#4a3405",
@@ -52,8 +52,8 @@ export const sponsorTiers: SponsorTier[] = [
   },
   {
     name: "Silver",
-    amount: "$250 – $499",
-    benefits: "Website and event signage",
+    amount: "$500 – $749",
+    benefits: "Website, program recognition, social media thank-you, and event signage",
     from: "#e3e5e8",
     to: "#a9adb4",
     text: "#33363b",
@@ -68,10 +68,19 @@ export const sponsorTiers: SponsorTier[] = [
   },
   {
     name: "Bronze",
-    amount: "$100 – $249",
-    benefits: "Website recognition",
+    amount: "$250 – $499",
+    benefits: "Logo on website and event signage",
     from: "#e0a370",
     to: "#a5642f",
+    text: "#3e2410",
+    sponsors: [],
+  },
+  {
+    name: "Supporter",
+    amount: "$100 – $249",
+    benefits: "Name on the sponsor page and event sponsor board",
+    from: "#d8a27e",
+    to: "#b8754d",
     text: "#3e2410",
     sponsors: [],
   },

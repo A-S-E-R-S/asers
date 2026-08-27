@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { chapters } from "@/data/chapters";
 
 export const metadata: Metadata = {
   title: "Judging",
@@ -32,6 +31,7 @@ export default function JudgingPage() {
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Judging</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">How We Judge</h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">ASERS judging was shaped by our own experience competing in major science fairs and research programs, and by research on how judges evaluate complex work.</p>
+      <a href="#judge-registration" className="mt-7 inline-block bg-brand px-6 py-3 font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Register as a judge</a>
       <p className="mt-5 font-light leading-[1.7]">Research on expert grading has found that judges can form an overall impression of a project and then give similar scores across several supposedly separate rubric categories. Research on review panels has also shown that discussion can help judges share expertise, while sometimes making individual opinions less independent.</p>
       <section className="mt-12 border-2 border-brand bg-brand px-6 py-7 text-white">
         <p className="font-condensed text-2xl uppercase tracking-wide">A rigorous evaluation system</p>
@@ -85,16 +85,12 @@ export default function JudgingPage() {
       <p className="mt-3 font-light leading-[1.7]">For top awards, judges first rank finalists independently. They then discuss the projects, raise scientific concerns, explain field-specific details, and resolve factual questions. After discussion, each judge submits a final private ranking.</p>
       <p className="mt-3 font-light leading-[1.7]">The final decision uses those rankings along with the oral and poster results and any important concerns raised during paper review.</p>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Register to judge</h2>
-      <ul className="mt-4 space-y-3">
-        {chapters.map((chapter) => (
-          <li key={chapter.slug} className="flex flex-wrap items-center justify-between gap-3 border-2 border-brand-pale p-4">
-            <div><p className="font-medium">{chapter.name} ({chapter.shortName})</p>{chapter.venue && <p className="text-sm font-light">{chapter.venue}</p>}</div>
-            {chapter.site ? <a href={chapter.site + "/register/judge"} className="bg-brand px-4 py-2 text-sm font-medium text-white transition hover:bg-brand-dark">Register to judge</a> : <span className="text-sm font-light">Registration opening soon</span>}
-          </li>
-        ))}
-      </ul>
-      <div className="mt-12"><Link href="/about" className="font-medium text-brand underline">Questions? Learn more about ASERS</Link></div>
+      <section id="judge-registration" className="mt-12 border-2 border-dashed border-brand p-7">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">Register as an ASERS judge</h2>
+        <p className="mt-3 font-light leading-[1.7]">Judge registration is opening soon. We are building a national community of scientists, engineers, faculty, graduate researchers, and other qualified STEM professionals who can evaluate student research at local ASERS chapter symposia and the National Symposium.</p>
+        <span className="mt-5 inline-block border-2 border-brand-pale px-5 py-2 text-sm font-medium text-ink-soft">Registration form coming soon</span>
+      </section>
+      <div className="mt-8"><Link href="/about" className="font-medium text-brand underline">Questions? Learn more about ASERS</Link></div>
     </div>
   );
 }

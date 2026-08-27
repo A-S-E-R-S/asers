@@ -6,6 +6,7 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "asers",
 	"main": ".open-next/worker.js",
+	"workers_dev": true,
 	"compatibility_date": "2026-07-03",
 	"compatibility_flags": [
 		"nodejs_compat",
@@ -37,7 +38,7 @@
 			"enabled": true
 		}
 	},
-	"upload_source_maps": true
+	"upload_source_maps": true,
 
 	/**
 	 * Custom domains — uncomment once the asers.org zone is added to the
@@ -46,11 +47,11 @@
 	 * Each chapter subdomain (nj, ny, ...) must be listed here so it routes to
 	 * this Worker; src/middleware.ts then 301s it to asers.org/chapters/<slug>.
 	 */
-	// "routes": [
-	// 	{ "pattern": "asers.org", "custom_domain": true },
-	// 	{ "pattern": "www.asers.org", "custom_domain": true },
-	// 	{ "pattern": "nj.asers.org", "custom_domain": true }
-	// ]
+	"routes": [
+		{ "pattern": "asers.org", "custom_domain": true },
+		{ "pattern": "www.asers.org", "custom_domain": true },
+		{ "pattern": "nj.asers.org", "custom_domain": true }
+	]
 
 	/**
 	 * Smart Placement

@@ -32,22 +32,32 @@ export default function AboutPage() {
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Our story</h2>
       <p className="mt-3 font-light leading-[1.6]">
-        ASERS grew out of the New Jersey Science Research Symposium, which began as a
-        student-run effort to create more opportunities for high school researchers to
-        present their work. As we competed in other research programs ourselves, we
-        became increasingly interested in how judging could be made more consistent and
-        fair.
+        ASERS began with the New Jersey Science Research Symposium in 2026, after the
+        suspension of JSHS left student researchers in our area without one of the
+        major opportunities we had expected to compete in. Having gone through science
+        fairs ourselves, including JSHS and ISEF, we decided to build a symposium so
+        students could still present their research and have it evaluated by scientists.
       </p>
       <p className="mt-3 font-light leading-[1.6]">
-        That led us to build ASERS around a research-informed judging structure,
-        multiple independent evaluations, and local chapters run by students under
-        shared national standards. We use separate oral and poster panels, conflict
-        screening, independent scoring before deliberation, and review of major
-        disagreements.
+        Running that first symposium made us interested in a broader problem: how
+        research competitions can make judging more consistent, fair, and useful to
+        every student, regardless of whether they win.
       </p>
       <p className="mt-3 font-light leading-[1.6]">
-        What started as one student-run symposium is growing into a national network of
-        local chapters.
+        That became the foundation for ASERS.
+      </p>
+      <p className="mt-3 font-light leading-[1.6]">
+        Our judging structure emphasizes multiple independent evaluations,
+        expertise-aware judge assignments, conflict screening, independent scoring
+        before deliberation, and review of major disagreements. Students present through
+        both oral and poster formats and receive detailed feedback designed to help
+        them strengthen their work.
+      </p>
+      <p className="mt-3 font-light leading-[1.6]">
+        What began as a response to a temporary gap in research opportunities has grown
+        into something with a different purpose. ASERS is now building a national
+        network of student-led chapters under shared standards, centered on making the
+        evaluation of student research as rigorous as the research itself.
       </p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Built by students</h2>

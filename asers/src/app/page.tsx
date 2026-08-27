@@ -7,8 +7,8 @@ export default function Home() {
       {/* Hero */}
       <section className="grid items-center gap-16 bg-white px-[56px] pb-[90px] pt-[70px] lg:grid-cols-2">
         {/* Image column: blue square offset behind the photo */}
-        <div className="relative pl-12 pt-12">
-          <div className="absolute left-0 top-0 h-80 w-80 bg-brand" aria-hidden />
+        <div className="relative pl-6 pt-6 sm:pl-12 sm:pt-12">
+          <div className="absolute left-0 top-0 h-48 w-48 bg-brand sm:h-80 sm:w-80" aria-hidden />
           {/* TODO: replace the striped placeholder with a real photo from a past
               NJSRS fair (public/images/) */}
           <div
@@ -18,7 +18,7 @@ export default function Home() {
                 "repeating-linear-gradient(135deg, #eceff7 0 12px, #dfe4f2 12px 24px)",
             }}
           >
-            <span className="font-mono text-[13px] uppercase tracking-[0.08em] text-[#5a6480]">
+            <span className="px-3 text-center font-mono text-[11px] uppercase tracking-[0.08em] text-[#5a6480] sm:text-[13px]">
               feature photo - 1200x960
             </span>
           </div>
@@ -27,16 +27,16 @@ export default function Home() {
             <button
               type="button"
               aria-label="Previous photo"
-              className="flex h-[62px] w-[78px] cursor-pointer items-center justify-center border-r border-white bg-brand text-[17px] text-white hover:bg-brand-dark"
+              className="flex h-14 w-16 cursor-pointer items-center justify-center border-r border-white bg-brand text-[17px] text-white hover:bg-brand-dark sm:h-[62px] sm:w-[78px]"
             >
-              ◀
+              <span className="h-3 w-3 rotate-45 border-b-2 border-l-2 border-white" aria-hidden="true" />
             </button>
             <button
               type="button"
               aria-label="Next photo"
-              className="flex h-[62px] w-[78px] cursor-pointer items-center justify-center bg-brand text-[17px] text-white hover:bg-brand-dark"
+              className="flex h-14 w-16 cursor-pointer items-center justify-center bg-brand text-[17px] text-white hover:bg-brand-dark sm:h-[62px] sm:w-[78px]"
             >
-              ▶
+              <span className="h-3 w-3 -rotate-[135deg] border-b-2 border-l-2 border-white" aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function Home() {
           <div>
             <p className="font-condensed text-lg uppercase tracking-tight text-brand">New for 2027</p>
             <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">Regional ASERS → National ASERS</h2>
-            <p className="mt-4 max-w-2xl text-[19px] font-light leading-[1.6]">We are planning our first National Symposium, bringing together top researchers from participating regional chapters. Selected finalists will receive support to compete and present their work nationally.</p>
+          <p className="mt-4 max-w-2xl text-[19px] font-light leading-[1.6]">We are planning our first National Symposium, where regional finalists can respond to scientist feedback, strengthen their work, and defend it nationally.</p>
           </div>
           <Link href="/national-symposium" className="whitespace-nowrap bg-brand px-[22px] py-[12px] font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Explore Nationals</Link>
         </div>
@@ -104,10 +104,8 @@ export default function Home() {
         </p>
           <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">A research symposium in every state</h2>
           <div className="mt-6 space-y-5 text-[19px] font-light leading-[1.6]">
-            <p>ASERS chapters run full-day research symposia with oral presentations, poster sessions, judge Q&amp;A, and awards. Each chapter follows the same national standards for judging, research integrity, and event structure.</p>
-            <p>Many of us have competed in major science fairs and research programs ourselves. Those experiences showed us how valuable serious scientific feedback can be, but also how much judging can depend on first impressions, individual scoring styles, and group discussion.</p>
-            <p>We designed our judging process around research on evaluator bias, scoring consistency, and panel deliberation. Multiple judges, separate oral and poster panels, independent scoring before discussion, and review of major disagreements are built into the process from the start.</p>
-            <p>Students organize the chapters, recruit judges, run the events, and help improve the competition each year. Research is evaluated by scientists, engineers, graduate researchers, faculty, and other qualified STEM professionals. <Link href="/about" className="font-medium text-brand underline">Learn more about us</Link>.</p>
+            <p>ASERS chapters run full-day research symposia with oral presentations, poster sessions, judge Q&amp;A, and awards under shared national standards for judging, research integrity, and event structure.</p>
+            <p>Students organize the chapters and recruit scientists, engineers, graduate researchers, faculty, and other qualified STEM professionals to evaluate the work. Our research-informed process combines independent scores, field-aware assignments, structured feedback, and a chance for finalists to improve before Nationals. <Link href="/about" className="font-medium text-brand underline">Learn more about us</Link>.</p>
           </div>
       </section>
 

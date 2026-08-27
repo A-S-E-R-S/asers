@@ -32,8 +32,6 @@ export default function JudgingPage() {
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">How We Judge</h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">ASERS judging was shaped by our own experience competing in major science fairs and research programs, and by research on how judges evaluate complex work.</p>
       <p className="mt-5 font-light leading-[1.7]">Research on expert grading has found that judges can form an overall impression of a project and then give similar scores across several supposedly separate rubric categories. Research on review panels has also shown that discussion can help judges share expertise, while sometimes making individual opinions less independent.</p>
-      <p className="mt-5 font-light leading-[1.7]">We built our judging structure around those problems.</p>
-
       <section className="mt-12 border-2 border-brand bg-brand px-6 py-7 text-white">
         <p className="font-condensed text-2xl uppercase tracking-wide">A rigorous evaluation system</p>
         <p className="mt-3 font-light leading-[1.7] text-brand-pale">ASERS does not claim to eliminate bias. We treat judging itself as something that can be measured and improved, using training, calibration, independent scoring, conflict controls, expertise-aware assignments, and review of unusual disagreements.</p>

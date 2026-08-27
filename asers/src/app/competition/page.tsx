@@ -21,8 +21,7 @@ export default function CompetitionPage() {
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">Compete at ASERS</h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">ASERS gives high school students several ways to present and defend their research throughout the day.</p>
       <p className="mt-5 text-[19px] font-light leading-[1.6]">Students give an oral presentation, answer questions from judges, and later discuss their work in a poster session. Different judges evaluate the oral and poster portions whenever possible, giving each project more than one independent review.</p>
-      <p className="mt-5 text-[19px] font-light leading-[1.6]">Our judging system is informed by research on how people score complex work. Studies of expert grading and review panels have found that overall impressions can affect several rubric scores at once, while group discussion can both surface useful information and influence individual judgments.</p>
-      <p className="mt-5 text-[19px] font-light leading-[1.6]">That is why ASERS uses several independent evaluations instead of relying on one panel, one presentation, or one detailed rubric.</p>
+      <p className="mt-5 text-[19px] font-light leading-[1.6]">ASERS uses several independent evaluations because judging complex work can be affected by first impressions, individual scoring styles, and group discussion.</p>
 
       <section id="feedback" className="mt-14 border-2 border-brand bg-brand px-6 py-7 text-white">
         <p className="font-condensed text-2xl uppercase tracking-wide">Structured scientific feedback</p>

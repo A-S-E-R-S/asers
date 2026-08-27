@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -10,11 +11,11 @@ export const metadata: Metadata = {
 
 // TODO: confirm titles / add-remove people for the national org.
 const team = [
-  { name: "Subhi Stephan", role: "Technology Committee Chair" },
-  { name: "Paridhi Tyagi", role: "Participant Outreach Chair" },
-  { name: "Daniel Han", role: "Logistics & Fundraising" },
-  { name: "Ahisha Ravi", role: "Logistics & Fundraising, Marketing" },
-  { name: "Aaron Yu", role: "Judging Outreach Chair" },
+  { name: "Subhi Stephan", role: "Technology Committee Chair", image: "/images/people/subhi_stephan.jpg" },
+  { name: "Paridhi Tyagi", role: "Participant Outreach Chair", image: "/images/people/pari_tyagi.jpg" },
+  { name: "Daniel Han", role: "Logistics & Fundraising", image: "/images/people/daniel_han.jpg" },
+  { name: "Ahisha Ravi", role: "Logistics & Fundraising, Marketing", image: "/images/people/ahisha_ravi.jpg" },
+  { name: "Aaron Yu", role: "Judging Outreach Chair", image: "/images/people/aaron_yu.jpg" },
 ];
 
 export default function AboutPage() {
@@ -75,9 +76,14 @@ export default function AboutPage() {
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Our team</h2>
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         {team.map((m) => (
-          <div key={m.name} className="border-2 border-brand-pale p-5">
-            <p className="font-medium">{m.name}</p>
-            <p className="mt-1 text-sm font-light">{m.role}</p>
+          <div key={m.name} className="overflow-hidden border-2 border-brand-pale">
+            <div className="relative aspect-[4/3] bg-brand-pale">
+              <Image src={m.image} alt={m.name} fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
+            </div>
+            <div className="p-5">
+              <p className="font-medium">{m.name}</p>
+              <p className="mt-1 text-sm font-light">{m.role}</p>
+            </div>
           </div>
         ))}
       </div>

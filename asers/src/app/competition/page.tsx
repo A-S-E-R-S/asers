@@ -24,6 +24,14 @@ export default function CompetitionPage() {
       <p className="mt-5 text-[19px] font-light leading-[1.6]">Our judging system is informed by research on how people score complex work. Studies of expert grading and review panels have found that overall impressions can affect several rubric scores at once, while group discussion can both surface useful information and influence individual judgments.</p>
       <p className="mt-5 text-[19px] font-light leading-[1.6]">That is why ASERS uses several independent evaluations instead of relying on one panel, one presentation, or one detailed rubric.</p>
 
+      <section id="feedback" className="mt-14 border-2 border-brand bg-brand px-6 py-7 text-white">
+        <p className="font-condensed text-2xl uppercase tracking-wide">Structured scientific feedback</p>
+        <p className="mt-3 font-light leading-[1.7] text-brand-pale">Every participant should get value from presenting, whether or not they receive an award. After the symposium, ASERS aims to provide a combined feedback report built from judge evaluations.</p>
+        <ul className="mt-5 grid gap-3 text-sm font-light leading-[1.6] sm:grid-cols-2">
+          {["Strongest part of the work", "Most important limitation", "Alternative explanation to consider", "One experiment or analysis that would strengthen the conclusion", "One question worth pursuing next"].map((item) => <li key={item} className="border border-white/30 px-4 py-3">{item}</li>)}
+        </ul>
+      </section>
+
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Competition format</h2>
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
         {format.map(([title, body]) => (
@@ -44,6 +52,10 @@ export default function CompetitionPage() {
           </div>
         ))}
       </div>
+
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">The improvement loop</h2>
+      <p className="mt-3 font-light leading-[1.7]">Science is not a frozen submission. Students present, receive criticism, revise, and test again. Regional finalists are encouraged to strengthen their analyses, address judge feedback, conduct additional experiments, and correct limitations before the National Symposium.</p>
+      <p className="mt-4 border-y-2 border-brand py-4 text-center font-condensed text-xl uppercase tracking-wide text-brand">Submit → present → receive feedback → improve → defend again</p>
       <div className="mt-12 flex flex-wrap gap-4">
         <Link href="/chapters" className="bg-brand px-[22px] py-[12px] font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Find your chapter</Link>
         <Link href="/judging" className="border-2 border-brand px-[22px] py-[12px] font-condensed text-[22px] uppercase tracking-tight text-brand transition hover:bg-brand hover:text-white">Become a judge</Link>

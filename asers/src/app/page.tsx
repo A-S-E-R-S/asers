@@ -76,6 +76,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-y border-strip-border bg-strip">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <p className="font-condensed text-lg uppercase tracking-tight text-brand">Beyond the awards</p>
+          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-[-0.015em]">Every researcher leaves with a way to make the work better.</h2>
+          <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">ASERS judges do more than rank projects. Each researcher receives structured feedback from scientists: the strongest part of the work, an important limitation, an alternative explanation to consider, one experiment or analysis that could strengthen the conclusion, and a question worth pursuing next.</p>
+          <Link href="/competition#feedback" className="mt-6 inline-block font-medium text-brand underline">See how the feedback loop works</Link>
+        </div>
+      </section>
+
       {/* National symposium */}
       <section className="bg-strip">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_auto]">

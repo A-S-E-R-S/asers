@@ -34,6 +34,11 @@ export default function JudgingPage() {
       <p className="mt-5 font-light leading-[1.7]">Research on expert grading has found that judges can form an overall impression of a project and then give similar scores across several supposedly separate rubric categories. Research on review panels has also shown that discussion can help judges share expertise, while sometimes making individual opinions less independent.</p>
       <p className="mt-5 font-light leading-[1.7]">We built our judging structure around those problems.</p>
 
+      <section className="mt-12 border-2 border-brand bg-brand px-6 py-7 text-white">
+        <p className="font-condensed text-2xl uppercase tracking-wide">A rigorous evaluation system</p>
+        <p className="mt-3 font-light leading-[1.7] text-brand-pale">ASERS does not claim to eliminate bias. We treat judging itself as something that can be measured and improved, using training, calibration, independent scoring, conflict controls, expertise-aware assignments, and review of unusual disagreements.</p>
+      </section>
+
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Three-part evaluation</h2>
       <div className="mt-5 grid gap-4 sm:grid-cols-3">
         {[
@@ -54,6 +59,7 @@ export default function JudgingPage() {
         {areas.map((area) => <li key={area} className="border-l-4 border-brand pl-4">{area}</li>)}
       </ul>
       <p className="mt-5 font-light leading-[1.7]">Project size, expensive equipment, large datasets, complicated models, polished graphics, and mentor prestige do not carry weight on their own.</p>
+      <p className="mt-4 font-light leading-[1.7]">Judges also answer two explicit questions: What intellectual contribution did the student make? Does the conclusion follow from the evidence actually generated?</p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Scoring and deliberation</h2>
       <p className="mt-3 font-light leading-[1.7]">Judges use a short rubric based on the four areas above. We keep the rubric short because adding more scoring categories does not necessarily make judgments more independent.</p>
@@ -69,6 +75,9 @@ export default function JudgingPage() {
       <ul className="mt-4 grid gap-2 font-light leading-[1.6] sm:grid-cols-2">
         {safeguards.map((item) => <li key={item} className="border border-brand-pale px-4 py-3">{item}</li>)}
       </ul>
+
+      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Feedback that helps researchers improve</h2>
+      <p className="mt-3 font-light leading-[1.7]">A judging interaction should remain useful after the rankings are published. ASERS judges are asked to identify the strongest part of the work, an important limitation, an alternative explanation, one way to strengthen the conclusion, and a question worth pursuing next.</p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Judge training</h2>
       <p className="mt-3 font-light leading-[1.7]">Before the event, judges receive short guidance on following the evidence closely, asking follow-up questions based on the student&apos;s answers, checking whether claims match the data, separating future potential from demonstrated results, evaluating student understanding and contribution, recognizing limitations as part of good scientific reasoning, and using discussion to share expertise without pressuring other judges to agree.</p>

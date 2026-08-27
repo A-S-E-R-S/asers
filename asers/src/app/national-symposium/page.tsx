@@ -18,7 +18,7 @@ export default function NationalSymposiumPage() {
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Coming in 2027</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">The ASERS National Symposium</h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">ASERS is planning its first National Symposium, bringing together top researchers from participating regional ASERS chapters across the United States.</p>
-      <p className="mt-5 text-[19px] font-light leading-[1.6]">Selected finalists will be invited to present and compete nationally through the same research-informed judging system that guides our regional symposia.</p>
+      <p className="mt-5 text-[19px] font-light leading-[1.6]">Selected finalists will be invited to present and compete nationally through the same research-informed judging system that guides our regional symposia, with an opportunity to respond to feedback before they defend the improved work.</p>
 
       <div className="mt-10 border-2 border-brand bg-brand px-6 py-7 text-white">
         <p className="font-condensed text-2xl uppercase tracking-wide">Regional ASERS → National ASERS</p>
@@ -34,6 +34,10 @@ export default function NationalSymposiumPage() {
           </div>
         ))}
       </div>
+
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Not a frozen submission</h2>
+      <p className="mt-3 font-light leading-[1.7]">Finalists advance the same underlying research project, but they are encouraged to strengthen analyses, address judge feedback, conduct additional experiments, and correct limitations between Regionals and Nationals. Actual science is iterative: present, get questioned, revise, and test again.</p>
+      <p className="mt-4 border-y-2 border-brand py-4 text-center font-condensed text-xl uppercase tracking-wide text-brand">Regional feedback → research improvement → National defense</p>
 
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Cost should not determine who gets to compete</h2>
       <p className="mt-3 font-light leading-[1.7]">ASERS aims to subsidize travel for National Finalists who would otherwise face financial barriers to attending. Support may include travel grants, hotel rooms, registration, meals, local transportation, and poster printing, depending on the program budget and approved assistance policies.</p>

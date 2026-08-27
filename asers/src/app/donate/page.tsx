@@ -16,10 +16,37 @@ export default function DonatePage() {
         Support student research
       </h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">
-        ASERS symposia give high school students a venue to present STEM research,
-        compete for prizes, receive feedback, and learn from peers. Contributions
-        support logistics, printing, display materials, and awards.
+        Your donation helps expand access to high-quality student research competitions,
+        including regional symposia, national programming, student travel assistance,
+        awards, and judging resources.
       </p>
+      <section className="mt-8 border-2 border-brand bg-brand px-6 py-7 text-white">
+        <p className="font-condensed text-2xl uppercase tracking-wide">Help make Nationals accessible</p>
+        <p className="mt-3 font-light leading-[1.7] text-brand-pale">
+          We want qualifying for ASERS Nationals to depend on the quality of a
+          student&apos;s research, not whether their family can afford the trip. ASERS
+          aims to subsidize travel for National Finalists who would otherwise face
+          financial barriers to attending.
+        </p>
+        <a href="mailto:contact@asers.org?subject=Donate%20to%20ASERS" className="mt-5 inline-block border-2 border-white px-5 py-2 font-medium text-white transition hover:border-brand-pale hover:text-brand-pale">
+          Donate to ASERS
+        </a>
+      </section>
+
+      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Examples of impact</h2>
+      <div className="mt-5 grid gap-3 sm:grid-cols-2">
+        {[
+          ["$50", "can help cover a student's poster or event materials."],
+          ["$250", "can help subsidize a finalist's travel to the National Symposium."],
+          ["$500", "can support awards or operating costs for a regional symposium."],
+          ["$1,000+", "can help launch or expand an ASERS chapter."],
+        ].map(([amount, impact]) => (
+          <div key={amount} className="border-2 border-brand-pale p-5">
+            <p className="font-condensed text-2xl text-brand">{amount}</p>
+            <p className="mt-2 text-sm font-light leading-[1.6]">{impact}</p>
+          </div>
+        ))}
+      </div>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">
         Sponsorship tiers &amp; our sponsors

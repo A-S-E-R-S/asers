@@ -76,6 +76,18 @@ export default function Home() {
         </div>
       </section>
 
+      {/* National symposium */}
+      <section className="bg-strip">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_auto]">
+          <div>
+            <p className="font-condensed text-lg uppercase tracking-tight text-brand">New for 2027</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">Regional ASERS → National ASERS</h2>
+            <p className="mt-4 max-w-2xl text-[19px] font-light leading-[1.6]">We are planning our first National Symposium, bringing together top researchers from participating regional chapters. Selected finalists will receive support to compete and present their work nationally.</p>
+          </div>
+          <Link href="/national-symposium" className="whitespace-nowrap bg-brand px-[22px] py-[12px] font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Explore Nationals</Link>
+        </div>
+      </section>
+
       {/* What is ASERS */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
         <p className="font-condensed text-lg uppercase tracking-tight text-brand">

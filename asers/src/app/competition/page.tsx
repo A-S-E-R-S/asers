@@ -24,6 +24,26 @@ export default function CompetitionPage() {
       <p className="mt-5 text-[19px] font-light leading-[1.6]">Students give an oral presentation, answer questions from judges, and later discuss their work in a poster session. Different judges evaluate the oral and poster portions whenever possible, giving each project more than one independent review.</p>
       <p className="mt-5 text-[19px] font-light leading-[1.6]">ASERS uses several independent evaluations because judging complex work can be affected by first impressions, individual scoring styles, and group discussion.</p>
 
+      <section className="mt-14 border-2 border-brand-pale bg-strip px-6 py-7">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p className="font-condensed text-lg uppercase tracking-tight text-brand">Rules &amp; eligibility</p>
+            <h2 className="mt-1 text-2xl font-bold tracking-[-0.015em]">Can I enter?</h2>
+          </div>
+          <Link href="/competition/rules" className="font-medium text-brand underline">Read the full research rules →</Link>
+        </div>
+        <div className="mt-6 grid gap-3 text-sm font-light leading-[1.6] sm:grid-cols-2">
+          <p><strong className="font-medium">Grades:</strong> 9–12</p>
+          <p><strong className="font-medium">Projects:</strong> Individual or team</p>
+          <p><strong className="font-medium">Research:</strong> Original experimental, computational, engineering, or theoretical work</p>
+          <p><strong className="font-medium">Required:</strong> Research paper, oral presentation, and poster</p>
+          <p><strong className="font-medium">Safety review:</strong> Required where applicable</p>
+          <p><strong className="font-medium">Registration:</strong> Through your local ASERS chapter</p>
+        </div>
+        <p className="mt-6 font-light leading-[1.7]">ASERS competitions are open to high school students in grades 9–12 through participating chapters. Students may enter individual or team research projects that meet their chapter&apos;s eligibility requirements.</p>
+        <p className="mt-3 font-light leading-[1.7]">Projects must involve original student research. Demonstrations, literature reviews, informational projects, and projects that only reproduce existing work are not eligible as research entries.</p>
+      </section>
+
       <section id="feedback" className="mt-14 border-2 border-brand bg-brand px-6 py-7 text-white">
         <p className="font-condensed text-2xl uppercase tracking-wide">Structured scientific feedback</p>
         <p className="mt-3 font-light leading-[1.7] text-brand-pale">Every participant should get value from presenting, whether or not they receive an award. After the symposium, ASERS aims to provide a combined feedback report built from judge evaluations.</p>

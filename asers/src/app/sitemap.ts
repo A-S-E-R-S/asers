@@ -4,6 +4,7 @@ const routes = [
   "",
   "/about",
   "/competition",
+  "/competition/rules",
   "/judging",
   "/national-symposium",
   "/chapters",

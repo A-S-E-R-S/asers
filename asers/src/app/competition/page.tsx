@@ -5,6 +5,7 @@ import { chapters } from "@/data/chapters";
 export const metadata: Metadata = {
   title: "Competition",
   description: "How students present, defend, and are evaluated at an ASERS research symposium.",
+  alternates: { canonical: "/competition" },
 };
 
 const format = [

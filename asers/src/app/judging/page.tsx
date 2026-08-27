@@ -5,6 +5,7 @@ import { chapters } from "@/data/chapters";
 export const metadata: Metadata = {
   title: "Judging",
   description: "How ASERS evaluates student research and reduces bias in scientific judging.",
+  alternates: { canonical: "/judging" },
 };
 
 const areas = [

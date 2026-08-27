@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Donate",
   description:
     "Sponsor an ASERS symposium. Donations fund logistics, printing, display materials, and student awards.",
+  alternates: { canonical: "/donate" },
 };
 
 export default function DonatePage() {

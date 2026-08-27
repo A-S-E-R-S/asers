@@ -1,6 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { chapters, impactStats } from "@/data/chapters";
 import HeroCarousel from "@/components/HeroCarousel";
+
+export const metadata: Metadata = {
+  title: "Student Research, Judged by Scientists",
+  description:
+    "A student-led research competition where high school researchers present original work, receive structured scientist feedback, and improve their work before Nationals.",
+  alternates: { canonical: "/" },
+};
 
 export default function Home() {
   return (

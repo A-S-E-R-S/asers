@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "ASERS is a student-run national network of science research symposia, founded to expand access to research competition, mentorship, and community.",
+  alternates: { canonical: "/about" },
 };
 
 // TODO: confirm titles / add-remove people for the national org.

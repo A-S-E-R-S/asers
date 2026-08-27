@@ -5,6 +5,7 @@ import { chapters } from "@/data/chapters";
 export const metadata: Metadata = {
   title: "Chapters",
   description: "ASERS state chapters: find your local symposium or start a new chapter.",
+  alternates: { canonical: "/chapters" },
 };
 
 export default function ChaptersPage() {

@@ -4,6 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "National Symposium",
   description: "ASERS is planning its first National Symposium for 2027.",
+  alternates: { canonical: "/national-symposium" },
 };
 
 const model = [

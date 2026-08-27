@@ -4,11 +4,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const slides = [
-  { src: "/images/display/1.png", alt: "Student presenting research to a full auditorium" },
-  { src: "/images/display/2.png", alt: "Student presenting a research project on stage" },
-  { src: "/images/display/3.JPG", alt: "Students celebrating with awards after the symposium" },
-  { src: "/images/display/4.JPG", alt: "Students receiving certificates on stage" },
-  { src: "/images/display/5.png", alt: "Researchers and judges visiting poster presentations" },
+  { src: "/images/display/optimized/1.jpg", alt: "Student presenting research to a full auditorium" },
+  { src: "/images/display/optimized/2.jpg", alt: "Student presenting a research project on stage" },
+  { src: "/images/display/optimized/3.jpg", alt: "Students celebrating with awards after the symposium" },
+  { src: "/images/display/optimized/4.jpg", alt: "Students receiving certificates on stage" },
+  { src: "/images/display/optimized/5.jpg", alt: "Researchers and judges visiting poster presentations" },
 ];
 
 export default function HeroCarousel() {
@@ -18,7 +18,18 @@ export default function HeroCarousel() {
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
     }, 6000);
-    return () => window.clearInterval(timer);
+    const warmImages = window.setTimeout(() => {
+      slides.slice(1).forEach((slide, index) => {
+        window.setTimeout(() => {
+          const image = new window.Image();
+          image.src = slide.src;
+        }, index * 900);
+      });
+    }, 1800);
+    return () => {
+      window.clearInterval(timer);
+      window.clearTimeout(warmImages);
+    };
   }, []);
 
   const move = (direction: number) => {
@@ -28,17 +39,15 @@ export default function HeroCarousel() {
   return (
     <div className="relative">
       <div className="relative aspect-[5/4] w-full overflow-hidden bg-brand-dark">
-        {slides.map((slide, index) => (
-          <Image
-            key={slide.src}
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            priority={index === 0}
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className={"object-cover transition-opacity duration-500 " + (index === active ? "opacity-100" : "opacity-0")}
-          />
-        ))}
+        <Image
+          key={slides[active].src}
+          src={slides[active].src}
+          alt={slides[active].alt}
+          fill
+          priority={active === 0}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          className="object-cover"
+        />
         <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/55 to-transparent" aria-hidden="true" />
         <p className="absolute bottom-3 left-4 text-xs font-medium uppercase tracking-[0.08em] text-white">NJSRS in action</p>
       </div>

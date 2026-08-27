@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 			"A student-led research competition built around scientist feedback, fairer evaluation, and the chance to improve your work.",
 		images: [
 			{
-				url: "/images/display/1.png",
+				url: "/images/display/optimized/1.jpg",
 				width: 4032,
 				height: 3024,
 				alt: "A student presenting research at an ASERS symposium",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 		title: "ASERS | Student Research, Judged by Scientists",
 		description:
 			"A student-led research competition built around scientist feedback, fairer evaluation, and the chance to improve your work.",
-		images: ["/images/display/1.png"],
+		images: ["/images/display/optimized/1.jpg"],
 	},
 	robots: {
 		index: true,

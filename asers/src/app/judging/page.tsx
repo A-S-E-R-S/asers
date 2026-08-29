@@ -3,26 +3,23 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Judging",
-  description: "How ASERS evaluates student research and reduces bias in scientific judging.",
+  description: "How ASERS evaluates student research with multiple reviewers, structured feedback, and measurable judging practices.",
   alternates: { canonical: "/judging" },
 };
 
-const areas = [
-  "Scientific quality: Are the methods, controls, analysis, and study design sound?",
-  "Evidence: Do the results support the conclusions?",
-  "Original contribution: What did the project add?",
-  "Understanding and ownership: Can the student explain the choices, results, limitations, and their own contribution?",
+const evaluation = [
+  ["Research paper", "Reviewers check the scientific record before the event and flag questions for live judging."],
+  ["Oral presentation", "Students present their work and answer questions from one panel."],
+  ["Poster session", "A separate panel examines figures, methods, results, and individual claims in more detail."],
 ];
 
 const safeguards = [
-  "multiple judges for each project",
-  "separate oral and poster panels",
-  "independent scoring before discussion",
-  "central judge assignment",
-  "conflict-of-interest screening",
-  "review of major scoring disagreements",
-  "paper review focused on scientific consistency rather than writing polish",
-  "private final rankings after discussion",
+  "Multiple judges for each project",
+  "Expertise-aware central assignments",
+  "Separate oral and poster panels",
+  "Independent scoring before discussion",
+  "Conflict-of-interest screening",
+  "Review of unusually divergent evaluations",
 ];
 
 export default function JudgingPage() {
@@ -30,62 +27,55 @@ export default function JudgingPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Judging</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">How We Judge</h1>
-      <p className="mt-4 text-[19px] font-light leading-[1.6]">ASERS judging was shaped by our own experience competing in major science fairs and research programs, and by research on how judges evaluate complex work.</p>
+      <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">ASERS asks how a science competition can make the evaluation itself as rigorous as the research being evaluated.</p>
       <a href="#judge-registration" className="mt-7 inline-block bg-brand px-6 py-3 font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Register as a judge</a>
-      <p className="mt-5 font-light leading-[1.7]">Research on expert grading has found that judges can form an overall impression of a project and then give similar scores across several supposedly separate rubric categories. Research on review panels has also shown that discussion can help judges share expertise, while sometimes making individual opinions less independent.</p>
-      <section className="mt-12 border-2 border-brand bg-brand px-6 py-7 text-white">
-        <p className="font-condensed text-2xl uppercase tracking-wide">A rigorous evaluation system</p>
-        <p className="mt-3 font-light leading-[1.7] text-brand-pale">ASERS does not claim to eliminate bias. We treat judging itself as something that can be measured and improved, using training, calibration, independent scoring, conflict controls, expertise-aware assignments, and review of unusual disagreements.</p>
+
+      <section className="mt-12 border-y-2 border-brand py-7">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">A clear, independent evaluation</h2>
+        <div className="mt-6 grid gap-6 sm:grid-cols-3">
+          {evaluation.map(([title, body], index) => (
+            <div key={title}>
+              <p className="font-condensed text-2xl text-brand">0{index + 1}</p>
+              <h3 className="mt-2 font-condensed text-xl uppercase tracking-tight text-brand">{title}</h3>
+              <p className="mt-2 text-sm font-light leading-[1.7]">{body}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-6 font-light leading-[1.7]">Oral and poster judges submit scores independently before seeing the other group&apos;s evaluations.</p>
       </section>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Three-part evaluation</h2>
-      <div className="mt-5 grid gap-4 sm:grid-cols-3">
-        {[
-          ["Research paper review", "Reviewers check the scientific record before the event and flag questions that may need closer attention during live judging."],
-          ["Oral presentation", "Students present their work and answer questions from one panel of judges."],
-          ["Poster session", "A different panel examines the same project in greater detail."],
-        ].map(([title, body]) => (
-          <div key={title} className="border-2 border-brand-pale p-5">
-            <h3 className="font-condensed text-xl uppercase text-brand">{title}</h3>
-            <p className="mt-3 text-sm font-light leading-[1.7]">{body}</p>
-          </div>
-        ))}
-      </div>
-      <p className="mt-5 font-light leading-[1.7]">Oral and poster judges submit scores independently before seeing the other group&apos;s evaluations.</p>
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">What judges look for</h2>
+      <p className="mt-3 font-light leading-[1.7]">Judges focus on scientific quality, evidence, original contribution, and the student&apos;s understanding and ownership of the work.</p>
+      <p className="mt-3 font-light leading-[1.7]">They also ask: What intellectual contribution did the student make? Does the conclusion follow from the evidence actually generated? Project size, expensive equipment, polished graphics, and mentor prestige do not carry weight on their own.</p>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">What judges look for</h2>
-      <ul className="mt-4 space-y-3 font-light leading-[1.6]">
-        {areas.map((area) => <li key={area} className="border-l-4 border-brand pl-4">{area}</li>)}
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Structured feedback</h2>
+      <p className="mt-3 font-light leading-[1.7]">Judging should remain useful after rankings are published. Judges identify the strongest part of the work, an important limitation, an alternative explanation, one way to strengthen the conclusion, and a question worth pursuing next.</p>
+
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">How scores are reviewed</h2>
+      <p className="mt-3 font-light leading-[1.7]">Even with the same rubric, judges use rating scales differently. Some score more strictly; others score more generously.</p>
+      <p className="mt-3 font-light leading-[1.7]">ASERS can analyze scoring using <strong className="font-medium">Many-Facet Rasch Measurement (MFRM)</strong>, a method used in performance assessment to estimate judge severity while accounting for differences among projects and rubric criteria.</p>
+      <p className="mt-3 font-light leading-[1.7]">This can make scores from different panels more comparable and identify patterns worth reviewing. Statistical adjustment does not replace scientific judgment or automatically determine winners.</p>
+      <details className="mt-5 border border-brand-pale p-5">
+        <summary className="cursor-pointer font-medium text-brand">Technical details</summary>
+        <div className="mt-4 space-y-3 font-light leading-[1.7]">
+          <p>MFRM models project performance, judge severity, and rubric-criterion difficulty on a common measurement scale. This helps ASERS study how consistently judges use the scoring system.</p>
+          <p>The method works best when assignments contain enough overlap between judges and projects to connect different panels statistically. ASERS considers that need when designing assignments.</p>
+        </div>
+      </details>
+
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Safeguards and training</h2>
+      <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+        {safeguards.map((item) => <li key={item} className="border border-brand-pale px-4 py-3 text-sm font-light">{item}</li>)}
       </ul>
-      <p className="mt-5 font-light leading-[1.7]">Project size, expensive equipment, large datasets, complicated models, polished graphics, and mentor prestige do not carry weight on their own.</p>
-      <p className="mt-4 font-light leading-[1.7]">Judges also answer two explicit questions: What intellectual contribution did the student make? Does the conclusion follow from the evidence actually generated?</p>
+      <p className="mt-5 font-light leading-[1.7]">Before the event, judges receive guidance on following evidence, checking claims against data, evaluating student contribution, recognizing limitations, and sharing expertise without pressuring others to agree. Judges do not have to reach consensus.</p>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Scoring and deliberation</h2>
-      <p className="mt-3 font-light leading-[1.7]">Judges use a short rubric based on the four areas above. We keep the rubric short because adding more scoring categories does not necessarily make judgments more independent.</p>
-      <p className="mt-4 border-y-2 border-brand py-4 text-center font-condensed text-xl uppercase tracking-wide text-brand">Independent scoring → score submission → judge discussion → optional private revision</p>
-      <p className="mt-4 font-light leading-[1.7]">Judges discuss projects only after their first scores are submitted. Discussion gives judges a chance to raise scientific concerns, explain field-specific details, and point out things another judge may have missed. Judges do not have to reach consensus.</p>
+      <section className="mt-14 border-2 border-brand-pale bg-strip px-6 py-7">
+        <p className="font-condensed text-lg uppercase tracking-tight text-brand">Top awards</p>
+        <h2 className="mt-1 text-2xl font-bold tracking-[-0.015em]">The cross-category final</h2>
+        <p className="mt-3 font-light leading-[1.7]">The strongest projects from each category advance to a final round in the auditorium. Finalists present and defend their research before a final panel. The panel considers the complete set of evaluations, scientific concerns, and student understanding when selecting the highest awards across categories.</p>
+      </section>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Judge assignment and conflicts</h2>
-      <p className="mt-3 font-light leading-[1.7]">Projects are assigned centrally based on relevant expertise and conflicts of interest. Judges may not evaluate students they have mentored, supervised, collaborated with, or have a close personal or professional connection to. Conflicts can also include a connection to a direct competitor.</p>
-      <p className="mt-3 font-light leading-[1.7]">Parents or guardians of competitors may not take part in judging decisions that could affect their child&apos;s awards.</p>
-
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Reducing bias</h2>
-      <p className="mt-3 font-light leading-[1.7]">Our goal is to reduce how much any one person&apos;s impression can affect the final result. ASERS uses:</p>
-      <ul className="mt-4 grid gap-2 font-light leading-[1.6] sm:grid-cols-2">
-        {safeguards.map((item) => <li key={item} className="border border-brand-pale px-4 py-3">{item}</li>)}
-      </ul>
-
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Feedback that helps researchers improve</h2>
-      <p className="mt-3 font-light leading-[1.7]">A judging interaction should remain useful after the rankings are published. ASERS judges are asked to identify the strongest part of the work, an important limitation, an alternative explanation, one way to strengthen the conclusion, and a question worth pursuing next.</p>
-
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Judge training</h2>
-      <p className="mt-3 font-light leading-[1.7]">Before the event, judges receive short guidance on following the evidence closely, asking follow-up questions based on the student&apos;s answers, checking whether claims match the data, separating future potential from demonstrated results, evaluating student understanding and contribution, recognizing limitations as part of good scientific reasoning, and using discussion to share expertise without pressuring other judges to agree.</p>
-
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Final awards</h2>
-      <p className="mt-3 font-light leading-[1.7]">For top awards, judges first rank finalists independently. They then discuss the projects, raise scientific concerns, explain field-specific details, and resolve factual questions. After discussion, each judge submits a final private ranking.</p>
-      <p className="mt-3 font-light leading-[1.7]">The final decision uses those rankings along with the oral and poster results and any important concerns raised during paper review.</p>
-
-      <section id="judge-registration" className="mt-12 border-2 border-dashed border-brand p-7">
+      <section id="judge-registration" className="mt-14 border-2 border-dashed border-brand p-7">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Register as an ASERS judge</h2>
         <p className="mt-3 font-light leading-[1.7]">Judge registration is opening soon. We are building a national community of scientists, engineers, faculty, graduate researchers, and other qualified STEM professionals who can evaluate student research at local ASERS chapter symposia and the National Symposium.</p>
         <span className="mt-5 inline-block border-2 border-brand-pale px-5 py-2 text-sm font-medium text-ink-soft">Registration form coming soon</span>

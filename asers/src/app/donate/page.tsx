@@ -21,6 +21,16 @@ export default function DonatePage() {
         including regional symposia, national programming, student travel assistance,
         awards, and judging resources.
       </p>
+      <nav aria-label="On this page" className="mt-8 border-y border-brand-pale py-4">
+        <p className="font-condensed text-lg uppercase tracking-tight text-brand">On this page</p>
+        <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+          <a href="#impact" className="font-medium text-brand underline">Impact</a>
+          <a href="#levels" className="font-medium text-brand underline">General sponsorship</a>
+          <a href="#special-awards" className="font-medium text-brand underline">Special awards</a>
+          <a href="#program-support" className="font-medium text-brand underline">Programs and events</a>
+          <a href="#contact" className="font-medium text-brand underline">How to donate</a>
+        </div>
+      </nav>
       <div className="mt-8 grid gap-4 md:grid-cols-3">
         {[
           ["Sponsor the organization", "Support regional symposia, national programming, student access, judging, awards, and chapter growth."],
@@ -46,7 +56,7 @@ export default function DonatePage() {
         </a>
       </section>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Examples of impact</h2>
+      <h2 id="impact" className="mt-12 scroll-mt-8 text-2xl font-bold tracking-[-0.015em]">Examples of impact</h2>
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
         {[
           ["$50", "can help cover a student's poster or event materials."],
@@ -61,10 +71,10 @@ export default function DonatePage() {
         ))}
       </div>
 
-      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">General sponsorship levels</h2>
-      <p className="mt-3 font-light leading-[1.6]">General sponsorship supports the organization where the need is greatest. Recognition scales with the level of support.</p>
-
-      <div className="mt-6 space-y-10">
+      <details id="levels" open className="mt-14 scroll-mt-8 border-y-2 border-brand-pale">
+        <summary className="cursor-pointer py-4 text-2xl font-bold tracking-[-0.015em]">General sponsorship levels</summary>
+        <p className="pb-2 font-light leading-[1.6]">General sponsorship supports the organization where the need is greatest. Recognition scales with the level of support.</p>
+      <div className="space-y-6 py-5">
         {sponsorTiers.map((tier) => (
           <section key={tier.name}>
             {/* Tier banner */}
@@ -121,13 +131,14 @@ export default function DonatePage() {
           </section>
         ))}
       </div>
+      </details>
 
       <p className="mt-6 text-sm font-light">
         …plus the individual families and donors who sponsor our special awards. Thank
         you!
       </p>
 
-      <section className="mt-14">
+      <section id="special-awards" className="mt-14 scroll-mt-8">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Sponsor a special award</h2>
         <p className="mt-3 font-light leading-[1.6]">Organizations can propose a named award recognizing strong research in an area connected to their mission. Special awards typically begin at $500, with most of the contribution supporting the student prize.</p>
         <p className="mt-3 font-light leading-[1.6]">Sponsors may help define the scientific focus and nominate qualified judges. ASERS reviews all criteria, judge assignments, and conflicts of interest before judging. Special-award sponsors do not select Grand Award winners.</p>
@@ -136,7 +147,7 @@ export default function DonatePage() {
         </div>
       </section>
 
-      <section className="mt-14">
+      <section id="program-support" className="mt-14 scroll-mt-8">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Sponsor a program or event</h2>
         <p className="mt-3 font-light leading-[1.6]">We welcome support for specific event components and access programs, including:</p>
         <ul className="mt-4 grid gap-2 sm:grid-cols-2">
@@ -145,7 +156,7 @@ export default function DonatePage() {
         <p className="mt-4 font-light leading-[1.6]">Program sponsors receive recognition connected to what they make possible. Sponsors do not control judge assignments or award selection.</p>
       </section>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">How to donate</h2>
+      <h2 id="contact" className="mt-12 scroll-mt-8 text-2xl font-bold tracking-[-0.015em]">How to donate</h2>
       <p className="mt-3 font-light leading-[1.6]">
         To sponsor a chapter or donate a special award, contact us and we&apos;ll connect
         you with the right chapter:

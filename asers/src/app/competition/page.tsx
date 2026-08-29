@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const stages = [
-  ["01", "Research paper", "Submit a paper before the symposium so reviewers can understand the methods, evidence, and research record."],
-  ["02", "Oral presentation", "Present your question, methods, results, interpretation, and limitations, then answer questions from a panel."],
-  ["03", "Poster session", "Discuss the project in more detail with a separate group of judges who submit independent evaluations."],
-  ["04", "Cross-category final", "Top projects from each category advance to a final round in the auditorium. Finalists defend their work before a final panel competing for the highest awards."],
+  ["01", "Submit", "Research paper review helps judges understand your methods, evidence, and research record."],
+  ["02", "Present", "Give a timed oral presentation, answer questions, and discuss your work at a poster session."],
+  ["03", "Improve", "Receive structured feedback from scientists, including a strength, limitation, alternative explanation, and next step."],
+  ["04", "Advance", "The strongest projects from each category move to a cross-category final in the auditorium for the top awards."],
 ];
 
 export default function CompetitionPage() {
@@ -20,11 +20,14 @@ export default function CompetitionPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Competition</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">Compete at ASERS</h1>
-      <p className="mt-4 text-[19px] font-light leading-[1.6]">ASERS gives high school students several ways to present, defend, and improve original research throughout the day.</p>
+      <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">Present original research, defend it before scientists, and leave with clear ways to make the work better.</p>
 
       <section className="mt-12 border-2 border-brand-pale bg-strip px-6 py-7">
-        <p className="font-condensed text-lg uppercase tracking-tight text-brand">Rules &amp; eligibility</p>
-        <div className="mt-5 grid gap-x-8 gap-y-3 text-sm font-light leading-[1.6] sm:grid-cols-2">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-2xl font-bold tracking-[-0.015em]">Rules &amp; eligibility</h2>
+          <Link href="/competition/rules" className="font-medium text-brand underline">Read the full rules →</Link>
+        </div>
+        <div className="mt-5 grid gap-x-8 gap-y-2 text-sm font-light leading-[1.6] sm:grid-cols-2">
           <p><strong className="font-medium">Grades:</strong> 9–12</p>
           <p><strong className="font-medium">Projects:</strong> Individual or team</p>
           <p><strong className="font-medium">Research:</strong> Original experimental, computational, engineering, or theoretical work</p>
@@ -32,14 +35,12 @@ export default function CompetitionPage() {
           <p><strong className="font-medium">Safety review:</strong> Required where applicable</p>
           <p><strong className="font-medium">Registration:</strong> Through your local chapter</p>
         </div>
-        <p className="mt-5 font-light leading-[1.7]">Projects must represent original student research. Demonstrations, literature reviews, informational projects, and work that only reproduces existing results are not eligible as research entries.</p>
-        <Link href="/competition/rules" className="mt-4 inline-block font-medium text-brand underline">Read the full rules and eligibility guidance →</Link>
       </section>
 
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">The competition journey</h2>
       <div className="mt-5 divide-y-2 divide-brand-pale border-y-2 border-brand-pale">
         {stages.map(([number, title, body]) => (
-          <div key={number} className="grid gap-3 py-5 sm:grid-cols-[64px_180px_1fr] sm:items-start">
+          <div key={number} className="grid gap-2 py-5 sm:grid-cols-[64px_150px_1fr] sm:items-start">
             <p className="font-condensed text-2xl text-brand">{number}</p>
             <h3 className="font-condensed text-xl uppercase tracking-tight text-brand">{title}</h3>
             <p className="font-light leading-[1.7]">{body}</p>
@@ -47,25 +48,10 @@ export default function CompetitionPage() {
         ))}
       </div>
 
-      <section id="feedback" className="mt-14 bg-brand px-6 py-7 text-white">
-        <p className="font-condensed text-2xl uppercase tracking-wide">What you leave with</p>
-        <p className="mt-3 font-light leading-[1.7] text-brand-pale">Every researcher should get value from presenting, whether or not they receive an award. ASERS aims to provide a combined feedback report identifying:</p>
-        <ul className="mt-5 grid gap-x-8 gap-y-2 text-sm font-light leading-[1.6] sm:grid-cols-2">
-          {["The strongest part of the work", "An important limitation", "An alternative explanation to consider", "One experiment or analysis that could strengthen the conclusion", "A question worth pursuing next"].map((item) => <li key={item} className="border-l border-white/50 pl-3">{item}</li>)}
-        </ul>
-      </section>
-
-      <section className="mt-14 border-2 border-brand-pale bg-strip px-6 py-7">
-        <p className="font-condensed text-lg uppercase tracking-tight text-brand">Top awards</p>
-        <h2 className="mt-1 text-2xl font-bold tracking-[-0.015em]">A final round across categories</h2>
-        <p className="mt-3 font-light leading-[1.7]">After category judging, the strongest projects from each category advance to a cross-category final round in the auditorium. Finalists present and defend their research before the final panel, which considers the complete set of evaluations, scientific concerns, and student understanding when selecting the top awards.</p>
-      </section>
-
-      <section className="mt-14">
-        <p className="font-condensed text-lg uppercase tracking-tight text-brand">A different kind of competition</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-[-0.015em]">The improvement loop</h2>
-        <p className="mt-3 font-light leading-[1.7]">Science is not a frozen submission. Students present, receive criticism, revise, and test again. Regional finalists are encouraged to strengthen analyses, address feedback, conduct additional experiments, and correct limitations before the National Symposium.</p>
-        <p className="mt-4 border-y-2 border-brand py-4 text-center font-condensed text-xl uppercase tracking-wide text-brand">Submit → present → receive feedback → improve → defend again</p>
+      <section id="feedback" className="mt-14 border-l-4 border-brand pl-5">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">More than a ranking</h2>
+        <p className="mt-3 font-light leading-[1.7]">Different judges score independently, and separate oral and poster panels give each project more than one careful look. After the symposium, ASERS aims to combine their comments into feedback that helps you strengthen the research.</p>
+        <p className="mt-3 border-y-2 border-brand py-4 text-center font-condensed text-xl uppercase tracking-wide text-brand">Submit → present → get feedback → improve → defend again</p>
       </section>
 
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Find your chapter</h2>

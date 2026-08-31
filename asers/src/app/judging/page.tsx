@@ -27,12 +27,12 @@ export default function JudgingPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Judging</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">How We Judge</h1>
-      <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">We want the evaluation to be as careful as the research. That means more than one panel, independent scores, useful questions, and feedback students can act on.</p>
+      <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">A good judge should understand the project, ask useful questions, and explain the score. Our process gives judges time to do that and gives students feedback they can use.</p>
       <a href="#judge-registration" className="mt-7 inline-block bg-brand px-6 py-3 font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Register as a judge</a>
 
       <section className="mt-12 border-l-4 border-brand bg-strip px-5 py-5">
-        <h2 className="text-2xl font-bold tracking-[-0.015em]">Designed with the limits of judging in mind</h2>
-        <p className="mt-3 font-light leading-[1.7]">Research on expert scoring shows that first impressions, differences in judge severity, and panel discussion can all affect an evaluation. Our process is designed to reduce those effects, not to pretend they can be removed completely.</p>
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">What we keep in mind</h2>
+        <p className="mt-3 font-light leading-[1.7]">Research on expert scoring shows that first impressions, differences in judge severity, and panel discussion can all affect an evaluation. We account for those problems, while recognizing that no judging process removes them completely.</p>
         <p className="mt-3 font-light leading-[1.7]">Independent panels and statistical review make results more consistent when the judging design and data support it. They do not make a winner objectively correct, replace scientific judgment, or eliminate the need for careful review.</p>
       </section>
 
@@ -57,7 +57,7 @@ export default function JudgingPage() {
       <p className="mt-3 font-light leading-[1.7]">After judging, students should receive a clear strength, limitation, alternative explanation, possible next analysis or experiment, and question worth pursuing.</p>
 
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">How scores are reviewed</h2>
-      <p className="mt-3 font-light leading-[1.7]">Judges naturally use scales differently. ASERS uses statistical review, including <strong className="font-medium">Many-Facet Rasch Measurement (MFRM)</strong> where appropriate, to study judge severity and make comparisons across panels more consistent.</p>
+      <p className="mt-3 font-light leading-[1.7]">Judges naturally use scales differently. Where the judging design and data support it, ASERS uses statistical review—including <strong className="font-medium">Many-Facet Rasch Measurement (MFRM)</strong>—to study how strictly different judges score and make comparisons across panels more consistent.</p>
       <details className="mt-5 border border-brand-pale p-5">
         <summary className="cursor-pointer font-medium text-brand">Technical details</summary>
         <div className="mt-4 space-y-3 font-light leading-[1.7]">
@@ -80,7 +80,7 @@ export default function JudgingPage() {
 
       <section id="judge-registration" className="mt-14 border-2 border-dashed border-brand p-7">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Register as an ASERS judge</h2>
-        <p className="mt-3 font-light leading-[1.7]">Judge registration is opening soon. We are building a national community of scientists, engineers, faculty, graduate researchers, and other qualified STEM professionals for local chapter symposia and the National Symposium.</p>
+        <p className="mt-3 font-light leading-[1.7]">Judge registration is opening soon. We are bringing together scientists, engineers, faculty, graduate researchers, and other qualified STEM professionals to work with local chapters and the National Symposium.</p>
         <span className="mt-5 inline-block border-2 border-brand-pale px-5 py-2 text-sm font-medium text-ink-soft">Registration form coming soon</span>
       </section>
       <div className="mt-8"><Link href="/about" className="font-medium text-brand underline">Questions? Learn more about ASERS</Link></div>

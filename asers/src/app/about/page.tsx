@@ -26,10 +26,9 @@ export default function AboutPage() {
         About ASERS
       </h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">
-        ASERS is a national science research competition built and led by high school
-        students. We organize research symposia where students present original work,
-        defend it before scientists and engineers, receive detailed feedback, and
-        compete for recognition.
+        ASERS is a student-run science research competition. At our symposia, students
+        present original work, answer questions from scientists and engineers, get
+        detailed feedback, and compete for recognition.
       </p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Our story</h2>
@@ -41,28 +40,26 @@ export default function AboutPage() {
         students could still present their research and have it evaluated by scientists.
       </p>
       <p className="mt-3 font-light leading-[1.6]">
-        Running that first symposium made us interested in a broader problem: how
-        research competitions can make judging more consistent, fair, and useful to
-        every student, regardless of whether they win.
+        After that first symposium, we started asking a bigger question: how can a
+        research competition make judging more consistent, fair, and useful to every
+        student, including the ones who do not win?
       </p>
       <p className="mt-3 font-light leading-[1.6]">
-        That became the foundation for ASERS.
+        That question became the foundation for ASERS.
       </p>
       <p className="mt-3 font-light leading-[1.6]">
-        Our judging structure emphasizes multiple independent evaluations,
-        expertise-aware judge assignments, conflict screening, independent scoring
-        before deliberation, and review of major disagreements. Students present through
-        both oral and poster formats and receive detailed feedback designed to help
-        them strengthen their work.
+        We use more than one evaluation, match judges to the subject when possible,
+        screen for conflicts, collect scores before discussion, and look again when
+        evaluations differ sharply. Students present orally and at a poster, then
+        receive feedback they can use to improve the work.
       </p>
       <p className="mt-3 font-light leading-[1.6]">
-        What began as a response to a temporary gap in research opportunities has grown
-        into something with a different purpose. ASERS is now building a national
-        network of student-led chapters under shared standards, centered on making the
-        evaluation of student research as rigorous as the research itself.
+        ASERS started as a response to a temporary gap in research opportunities. It is
+        now growing into a national network of student-led chapters with shared
+        standards and a simple goal: evaluate student research as carefully as possible.
       </p>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Built by students</h2>
+      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Students run ASERS</h2>
       <p className="mt-3 font-light leading-[1.6]">
         ASERS is planned and run by high school students across judging, outreach,
         technology, logistics, fundraising, marketing, and chapter development.

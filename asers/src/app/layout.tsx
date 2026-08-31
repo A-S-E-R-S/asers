@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 		"STEM research competition",
 	],
 	title: {
-		default: "ASERS | Student Research, Judged by Scientists",
+		default: "ASERS | High School Research Symposium",
 		template: "%s | ASERS",
 	},
 	description:
-		"ASERS is a student-led national network of research symposia where high school students present original work, receive structured scientist feedback, and improve their research.",
+		"ASERS is a student-led national network of high school research symposia where students present original work and receive feedback from scientists.",
 	alternates: {
 		canonical: "/",
 	},
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
 		type: "website",
 		url: "https://asers.org",
 		siteName: "ASERS",
-		title: "ASERS | Student Research, Judged by Scientists",
+		title: "ASERS | High School Research Symposium",
 		description:
-			"A student-led research competition built around scientist feedback, fairer evaluation, and the chance to improve your work.",
+			"A student-led research symposium where high school students present original work and receive feedback from scientists and engineers.",
 		images: [
 			{
 				url: "/images/display/optimized/1.jpg",
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "ASERS | Student Research, Judged by Scientists",
+		title: "ASERS | High School Research Symposium",
 		description:
-			"A student-led research competition built around scientist feedback, fairer evaluation, and the chance to improve your work.",
+			"A student-led research symposium where high school students present original work and receive feedback from scientists and engineers.",
 		images: ["/images/display/optimized/1.jpg"],
 	},
 	robots: {
@@ -96,8 +96,8 @@ export default function RootLayout({
 							url: "https://asers.org",
 							logo: "https://asers.org/images/asers.png",
 							email: "contact@asers.org",
-							description:
-								"A student-led national network of high school research symposia.",
+				description:
+							"A student-led national network of high school research symposia where students present original work and receive feedback from scientists.",
 							sameAs: [],
 						}),
 					}}

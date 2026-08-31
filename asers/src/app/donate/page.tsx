@@ -17,9 +17,8 @@ export default function DonatePage() {
         Support student research
       </h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">
-        Your donation helps expand access to high-quality student research competitions,
-        including regional symposia, national programming, student travel assistance,
-        awards, and judging resources.
+        Your donation helps students take part in research symposia. Gifts pay for
+        event costs, awards, judging, student materials, and travel support.
       </p>
       <nav aria-label="On this page" className="mt-8 border-y border-brand-pale py-4">
         <p className="font-condensed text-lg uppercase tracking-tight text-brand">On this page</p>
@@ -44,12 +43,11 @@ export default function DonatePage() {
         ))}
       </div>
       <section className="mt-8 border-2 border-brand bg-brand px-6 py-7 text-white">
-        <p className="font-condensed text-2xl uppercase tracking-wide">Help make Nationals accessible</p>
+          <p className="font-condensed text-2xl uppercase tracking-wide">Help students get to Nationals</p>
         <p className="mt-3 font-light leading-[1.7] text-brand-pale">
-          We want qualifying for ASERS Nationals to depend on the quality of a
-          student&apos;s research, not whether their family can afford the trip. ASERS
-          aims to subsidize travel for National Finalists who would otherwise face
-          financial barriers to attending.
+          A student&apos;s family should not have to choose between a national
+          opportunity and the cost of getting there. We hope to help National Finalists
+          with travel when the cost would otherwise keep them home.
         </p>
         <a href="mailto:contact@asers.org?subject=Donate%20to%20ASERS" className="mt-5 inline-block border-2 border-white px-5 py-2 font-medium text-white transition hover:border-brand-pale hover:text-brand-pale">
           Donate to ASERS

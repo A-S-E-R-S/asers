@@ -20,7 +20,7 @@ export default function CompetitionPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Competition</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">Compete at ASERS</h1>
-      <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">Present original research, defend it before scientists, and leave with clear ways to make the work better.</p>
+      <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">Bring original research, explain how you did it, and get useful questions and feedback from scientists.</p>
 
       <section className="mt-12 border-2 border-brand-pale bg-strip px-6 py-7">
         <div className="flex flex-wrap items-center justify-between gap-3">
@@ -50,7 +50,7 @@ export default function CompetitionPage() {
 
       <section id="feedback" className="mt-14 border-l-4 border-brand pl-5">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">More than a ranking</h2>
-        <p className="mt-3 font-light leading-[1.7]">Different judges score independently, and separate oral and poster panels give each project more than one careful look. After the symposium, ASERS aims to combine their comments into feedback that helps you strengthen the research.</p>
+        <p className="mt-3 font-light leading-[1.7]">Oral and poster judges score independently, so your project gets more than one review. After the symposium, we aim to combine their comments into feedback you can use.</p>
         <p className="mt-3 border-y-2 border-brand py-4 text-center font-condensed text-xl uppercase tracking-wide text-brand">Submit → present → get feedback → improve → defend again</p>
       </section>
 

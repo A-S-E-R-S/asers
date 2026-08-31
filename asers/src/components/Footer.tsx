@@ -8,8 +8,8 @@ export default function Footer() {
         <div>
           <p className="font-condensed text-[22px] uppercase tracking-tight">ASERS</p>
           <p className="mt-2 text-sm font-light leading-relaxed text-brand-pale">
-            American Science and Engineering Research Symposium, a national network of
-            student-run research competitions.
+            American Science and Engineering Research Symposium. Student-run research
+            competitions with shared standards.
           </p>
         </div>
         <div>

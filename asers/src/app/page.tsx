@@ -4,9 +4,9 @@ import { chapters, impactStats } from "@/data/chapters";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata: Metadata = {
-  title: "Student Research, Judged by Scientists",
+  title: { absolute: "ASERS | High School Research Symposium" },
   description:
-    "A student-led research competition where high school researchers present original work, receive structured scientist feedback, and improve their work before Nationals.",
+    "ASERS is a student-led research symposium where high school students present original work, answer questions from scientists, and receive detailed feedback.",
   alternates: { canonical: "/" },
 };
 
@@ -24,12 +24,12 @@ export default function Home() {
         {/* Text column */}
         <div className="max-w-[560px]">
           <h1 className="mb-[30px] text-[46px] font-bold leading-[1.1] tracking-[-0.015em] [text-wrap:balance]">
-            Built by students. Judged by scientists. Designed for fairer evaluation.
+            Bring your research to a room of scientists.
           </h1>
           <p className="mb-[26px] text-[19px] font-light leading-[1.6] text-ink-soft [text-wrap:pretty]">
-            ASERS is a student-led network of research symposia where high school
-            students present original work, defend it before STEM professionals, and
-            help build research communities in their own states.
+            ASERS is a student-led symposium for high school researchers. Submit a
+            paper, present your project in an oral session and poster session, and
+            get detailed questions and feedback from scientists and engineers.
           </p>
           <p className="text-[19px] font-medium">
             <Link href="/competition" className="text-brand underline hover:text-brand-dark">
@@ -66,9 +66,9 @@ export default function Home() {
 
       <section className="border-y border-strip-border bg-strip">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <p className="font-condensed text-lg uppercase tracking-tight text-brand">Beyond the awards</p>
-          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-[-0.015em]">Every researcher leaves with a way to make the work better.</h2>
-          <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">ASERS judges do more than rank projects. Each researcher receives structured feedback from scientists: the strongest part of the work, an important limitation, an alternative explanation to consider, one experiment or analysis that could strengthen the conclusion, and a question worth pursuing next.</p>
+          <p className="font-condensed text-lg uppercase tracking-tight text-brand">Useful feedback</p>
+          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-[-0.015em]">You can leave with something useful, even if you do not win.</h2>
+          <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">Judges point out what is working, what needs more support, and what they would try next. We aim to send each researcher home with comments they can use.</p>
           <Link href="/competition#feedback" className="mt-6 inline-block font-medium text-brand underline">See how the feedback loop works</Link>
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function Home() {
           <div>
             <p className="font-condensed text-lg uppercase tracking-tight text-brand">New for 2027</p>
             <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">Regional ASERS → National ASERS</h2>
-          <p className="mt-4 max-w-2xl text-[19px] font-light leading-[1.6]">We are planning our first National Symposium, where regional finalists can respond to scientist feedback, strengthen their work, and defend it nationally.</p>
+            <p className="mt-4 max-w-2xl text-[19px] font-light leading-[1.6]">We are planning our first National Symposium. Regional finalists will have time to respond to feedback, strengthen their work, and defend it in front of a national panel.</p>
           </div>
           <Link href="/national-symposium" className="whitespace-nowrap bg-brand px-[22px] py-[12px] font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Explore Nationals</Link>
         </div>
@@ -90,10 +90,10 @@ export default function Home() {
         <p className="font-condensed text-lg uppercase tracking-tight text-brand">
           What we do
         </p>
-          <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">A research symposium in every state</h2>
+          <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">Local events, shared standards</h2>
           <div className="mt-6 space-y-5 text-[19px] font-light leading-[1.6]">
-            <p>ASERS chapters run full-day research symposia with oral presentations, poster sessions, judge Q&amp;A, and awards under shared national standards for judging, research integrity, and event structure.</p>
-            <p>Students organize the chapters and recruit scientists, engineers, graduate researchers, faculty, and other qualified STEM professionals to evaluate the work. Our research-informed process combines independent scores, field-aware assignments, structured feedback, and a chance for finalists to improve before Nationals. <Link href="/about" className="font-medium text-brand underline">Learn more about us</Link>.</p>
+            <p>Each ASERS chapter runs a full-day symposium with oral presentations, posters, questions, and awards. Chapters share the same basic standards for judging, research integrity, and event structure.</p>
+            <p>Students run the chapters and invite scientists, engineers, faculty, and other STEM professionals to judge. The result is local competition with a common set of expectations. <Link href="/about" className="font-medium text-brand underline">Learn more about us</Link>.</p>
           </div>
       </section>
 
@@ -104,7 +104,7 @@ export default function Home() {
             Our chapters
           </p>
           <h2 className="mt-2 text-3xl font-bold tracking-[-0.015em]">
-            Organized locally, connected nationally
+            Chapters close to home, a network beyond them
           </h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {chapters.map((c) => (
@@ -126,7 +126,7 @@ export default function Home() {
               href="/chapters#start"
               className="flex flex-col items-center justify-center border-2 border-dashed border-brand p-6 text-center transition hover:bg-brand hover:text-white"
             >
-              <p className="text-xl font-bold">Your state here</p>
+              <p className="text-xl font-bold">Bring ASERS to your state</p>
               <p className="mt-2 text-sm font-light">
                 Interested in bringing ASERS to your state? Start a chapter.
               </p>

@@ -18,17 +18,12 @@ export default function HeroCarousel() {
     const timer = window.setInterval(() => {
       setActive((current) => (current + 1) % slides.length);
     }, 6000);
-    const warmImages = window.setTimeout(() => {
-      slides.slice(1).forEach((slide, index) => {
-        window.setTimeout(() => {
-          const image = new window.Image();
-          image.src = slide.src;
-        }, index * 900);
-      });
-    }, 1800);
+    slides.slice(1).forEach((slide) => {
+      const image = new window.Image();
+      image.src = slide.src;
+    });
     return () => {
       window.clearInterval(timer);
-      window.clearTimeout(warmImages);
     };
   }, []);
 
@@ -40,11 +35,11 @@ export default function HeroCarousel() {
     <div className="relative">
       <div className="relative aspect-[5/4] w-full overflow-hidden bg-brand-dark">
         <Image
-          key={slides[active].src}
           src={slides[active].src}
           alt={slides[active].alt}
           fill
           priority={active === 0}
+          unoptimized
           sizes="(max-width: 1024px) 100vw, 50vw"
           className="object-cover"
         />

@@ -20,7 +20,7 @@ export default function RulesPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Competition</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">Rules &amp; Eligibility</h1>
-      <p className="mt-4 text-[19px] font-light leading-[1.6]">These guidelines explain the common standards for ASERS research symposia. Your local chapter may publish additional deadlines, forms, category rules, or display requirements.</p>
+      <p className="mt-4 text-[19px] font-light leading-[1.6]">These are the common rules for ASERS symposia. Your local chapter may add deadlines, forms, category rules, or display requirements.</p>
 
       <div className="mt-8 grid gap-3 border-2 border-brand-pale bg-strip p-6 sm:grid-cols-2">
         {requirements.map(([label, value]) => <p key={label} className="text-sm font-light leading-[1.6]"><strong className="font-medium">{label}:</strong> {value}</p>)}

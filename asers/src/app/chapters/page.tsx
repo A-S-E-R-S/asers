@@ -16,8 +16,8 @@ export default function ChaptersPage() {
         Chapters
       </h1>
       <p className="mt-4 text-[19px] font-light leading-[1.6]">
-        Each ASERS chapter is organized locally and runs its own annual research
-        symposium under the national program.
+        Chapters run local research symposia with support and shared standards from
+        ASERS.
       </p>
 
       <div className="mt-10 space-y-6">
@@ -44,8 +44,8 @@ export default function ChaptersPage() {
           Start a chapter in your state
         </h2>
         <p className="mx-auto mt-3 max-w-xl font-light leading-[1.6]">
-          Want to bring a research symposium to your state? We&apos;ll help you with the
-          competition format, judging rubrics, registration, and fundraising playbook.
+          Want to bring a research symposium to your state? We can help with the format,
+          judging, registration, and fundraising.
         </p>
         <a
           href="mailto:contact@asers.org?subject=Starting%20an%20ASERS%20chapter"

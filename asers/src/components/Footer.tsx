@@ -53,6 +53,16 @@ export default function Footer() {
                 fairdirector@njsrs.org (NJ)
               </a>
             </li>
+            <li>
+              <a
+                className="hover:underline"
+                href="https://discord.gg/ZTDKEAS2hB"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Join us on Discord
+              </a>
+            </li>
           </ul>
         </div>
       </div>

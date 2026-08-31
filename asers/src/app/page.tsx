@@ -41,6 +41,14 @@ export default function Home() {
             </Link>
             <span className="font-light text-ink-soft">.</span>
           </p>
+          <a
+            href="https://discord.gg/ZTDKEAS2hB"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block text-sm font-medium text-brand underline hover:text-brand-dark"
+          >
+            Join the ASERS community on Discord →
+          </a>
         </div>
       </section>
 

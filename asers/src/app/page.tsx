@@ -67,8 +67,8 @@ export default function Home() {
       <section className="border-y border-strip-border bg-strip">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
           <p className="font-condensed text-lg uppercase tracking-tight text-brand">Useful feedback</p>
-          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-[-0.015em]">You can leave with something useful, even if you do not win.</h2>
-          <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">Judges point out what is working, what needs more support, and what they would try next. We aim to send each researcher home with comments they can use.</p>
+          <h2 className="mt-2 max-w-3xl text-3xl font-bold tracking-[-0.015em]">Feedback is part of the competition.</h2>
+          <p className="mt-4 max-w-3xl text-[19px] font-light leading-[1.6]">Judges point out what is working, what needs more support, and what they would try next. Every researcher should leave with comments they can use.</p>
           <Link href="/competition#feedback" className="mt-6 inline-block font-medium text-brand underline">See how the feedback loop works</Link>
         </div>
       </section>

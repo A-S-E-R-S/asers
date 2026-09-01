@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { sponsorTiers } from "@/data/sponsors";
+import SponsorInquiryForm from "@/components/SponsorInquiryForm";
 
 export const metadata: Metadata = {
   title: "Donate",
@@ -49,8 +50,8 @@ export default function DonatePage() {
           opportunity and the cost of getting there. We hope to help National Finalists
           with travel when the cost would otherwise keep them home.
         </p>
-        <a href="mailto:contact@asers.org?subject=Donate%20to%20ASERS" className="mt-5 inline-block border-2 border-white px-5 py-2 font-medium text-white transition hover:border-brand-pale hover:text-brand-pale">
-          Donate to ASERS
+        <a href="#contact" className="mt-5 inline-block border-2 border-white px-5 py-2 font-medium text-white transition hover:border-brand-pale hover:text-brand-pale">
+          Ask about supporting Nationals
         </a>
       </section>
 
@@ -156,23 +157,10 @@ export default function DonatePage() {
 
       <h2 id="contact" className="mt-12 scroll-mt-8 text-2xl font-bold tracking-[-0.015em]">How to donate</h2>
       <p className="mt-3 font-light leading-[1.6]">
-        To sponsor a chapter or donate a special award, contact us and we&apos;ll connect
-        you with the right chapter:
+        Tell us what you have in mind and we&apos;ll follow up with the right next step.
+        Donations are processed by ASERS, not by local chapters.
       </p>
-      <div className="mt-4 flex flex-wrap gap-4">
-        <a
-          href="mailto:contact@asers.org"
-          className="bg-brand px-6 py-3 font-medium text-white transition hover:bg-brand-dark"
-        >
-          contact@asers.org
-        </a>
-        <a
-          href="mailto:fairdirector@njsrs.org"
-          className="border-2 border-brand px-6 py-3 font-medium text-brand transition hover:bg-brand hover:text-white"
-        >
-          New Jersey: fairdirector@njsrs.org
-        </a>
-      </div>
+      <SponsorInquiryForm />
     </div>
   );
 }

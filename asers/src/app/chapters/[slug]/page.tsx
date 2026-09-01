@@ -85,6 +85,12 @@ export default async function ChapterPage({ params }: Props) {
             </a>
           </>
         )}
+        <Link
+          href={`/donate?chapter=${chapter.slug}#contact`}
+          className="border-2 border-brand px-6 py-3 font-medium text-brand transition hover:bg-brand hover:text-white"
+        >
+          Support {chapter.shortName}
+        </Link>
         <Link href="/chapters" className="font-medium text-brand underline">
           All chapters
         </Link>

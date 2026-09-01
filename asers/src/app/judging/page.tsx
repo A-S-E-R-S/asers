@@ -72,6 +72,15 @@ export default function JudgingPage() {
       </ul>
       <p className="mt-4 font-light leading-[1.7]">Judges receive guidance on evidence, student contribution, limitations, conflicts, and productive discussion. Consensus is not required.</p>
 
+      <section className="mt-10 border-2 border-brand-pale px-5 py-5">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">Judge eligibility and conflicts of interest</h2>
+        <div className="mt-3 space-y-3 font-light leading-[1.7]">
+          <p>Parents and legal guardians may not judge at a symposium where their student is competing. A student&apos;s current research mentor, advisor, principal investigator, direct supervisor, or anyone who substantially supervised or contributed to the project may not judge at that symposium.</p>
+          <p>Other relationships that could reasonably affect impartiality must be disclosed before judging. This includes teachers, former research mentors, collaborators, relatives, close family friends, and other personal, academic, or professional relationships. Judges with a conflict may not evaluate, score, rank, or deliberate on the affected student&apos;s project.</p>
+          <p>All prospective ASERS judges undergo <strong className="font-medium">identity, qualification, conflict-of-interest, and background screening</strong> before approval. ASERS may verify credentials, review disclosed and independently identified conflicts, and conduct appropriate background checks. Judges may be reassigned or deemed ineligible when a safety, integrity, qualification, or conflict concern is identified.</p>
+        </div>
+      </section>
+
       <section className="mt-14 border-2 border-brand-pale bg-strip px-6 py-7">
         <p className="font-condensed text-lg uppercase tracking-tight text-brand">Top awards</p>
         <h2 className="mt-1 text-2xl font-bold tracking-[-0.015em]">The cross-category final</h2>

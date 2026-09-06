@@ -20,7 +20,7 @@ export default function RulesPage() {
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Competition</p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">Rules &amp; Eligibility</h1>
-      <p className="mt-4 text-[19px] font-light leading-[1.6]">These are the common rules for ASERS symposia. Your local chapter may add deadlines, forms, category rules, or display requirements.</p>
+      <p className="mt-4 text-[19px] font-light leading-[1.6]">These are the national rules for ASERS symposia. Local chapters may add policies within the limits described below.</p>
 
       <div className="mt-8 grid gap-3 border-2 border-brand-pale bg-strip p-6 sm:grid-cols-2">
         {requirements.map(([label, value]) => <p key={label} className="text-sm font-light leading-[1.6]"><strong className="font-medium">{label}:</strong> {value}</p>)}
@@ -65,7 +65,7 @@ export default function RulesPage() {
       <p className="mt-3 font-light leading-[1.7]">AI tools may be used as research tools where appropriate, but students remain responsible for the accuracy, originality, and understanding of everything they submit or present. Any substantial use of AI in the research process should be disclosed where relevant.</p>
 
       <div className="mt-14 border-l-4 border-brand bg-brand-pale/40 p-5 font-light leading-[1.7]">
-        <strong className="font-medium">Important:</strong> Chapter-specific rules, deadlines, forms, and safety requirements may add to these common standards. Contact your chapter before beginning a regulated project or registering.
+        <strong className="font-medium">Local Chapter Policies:</strong> ASERS chapters must follow all national competition, judging, eligibility, and safety standards. Chapters may establish local deadlines, administrative forms, schedules, venue requirements, and reasonable display restrictions. Chapters may impose additional safety requirements when required by their venue, institution, or applicable law, but may not waive national standards or introduce rules that materially affect competitive fairness without approval from ASERS National.
       </div>
       <div className="mt-8 flex flex-wrap gap-4">
         <Link href="/competition" className="bg-brand px-6 py-3 font-medium text-white transition hover:bg-brand-dark">Back to competition</Link>

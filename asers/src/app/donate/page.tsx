@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { sponsorTiers } from "@/data/sponsors";
+import { Suspense } from "react"
 import SponsorInquiryForm from "@/components/SponsorInquiryForm";
 
 export const metadata: Metadata = {
@@ -160,7 +161,9 @@ export default function DonatePage() {
         Tell us what you have in mind and we&apos;ll follow up with the right next step.
         Donations are processed by ASERS, not by local chapters.
       </p>
+      <Suspense>
       <SponsorInquiryForm />
+      </Suspense>
     </div>
   );
 }

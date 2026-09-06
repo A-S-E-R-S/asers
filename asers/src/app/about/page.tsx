@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 // TODO: confirm titles / add-remove people for the national org.
 const team = [
-  { name: "Subhi Stephan", role: "Technology Committee Chair", image: "/images/people/subhi_stephan.jpg" },
+  { name: "Subhi Stephan", role: "Technology Committee Chair", image: "/images/people/subhi_stephan.png" },
   { name: "Paridhi Tyagi", role: "Participant Outreach Chair", image: "/images/people/pari_tyagi.jpg" },
   { name: "Daniel Han", role: "Logistics & Fundraising", image: "/images/people/daniel_han.jpg" },
   { name: "Ahisha Ravi", role: "Logistics & Fundraising, Marketing", image: "/images/people/ahisha_ravi.jpg" },

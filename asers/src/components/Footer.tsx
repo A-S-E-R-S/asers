@@ -63,6 +63,16 @@ export default function Footer() {
                 Join us on Discord
               </a>
             </li>
+            <li>
+              <a
+                className="hover:underline"
+                href="https://www.instagram.com/asers_official"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Follow us on Instagram
+              </a>
+            </li>
           </ul>
         </div>
       </div>

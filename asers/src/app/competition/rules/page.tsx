@@ -29,9 +29,16 @@ export default function RulesPage() {
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Eligible research</h2>
       <p className="mt-3 font-light leading-[1.7]">Students may enter original experimental, computational, engineering, or theoretical research. Demonstrations, literature reviews, informational projects, and projects that only reproduce existing work are not eligible as research entries.</p>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Research safety &amp; approval</h2>
+      <h2 id="research-approval" className="mt-12 scroll-mt-8 text-2xl font-bold tracking-[-0.015em]">Research approval and responsibility</h2>
       <p className="mt-3 font-light leading-[1.7]">Projects involving human participants, vertebrate animals, biological materials, hazardous chemicals, or other regulated research may require approval before experimentation begins.</p>
-      <p className="mt-3 font-light leading-[1.7]">ASERS chapters use a Scientific Review Committee process to review applicable projects and may require documentation showing that appropriate approvals were obtained. Students should contact their chapter before beginning regulated research.</p>
+      <p className="mt-3 font-light leading-[1.7]">ASERS is a conference-style presentation and evaluation venue. We do not design, fund, supervise, or approve student research, and we do not replace the school, mentor, university, IRB, SRC, IACUC, or other responsible review body.</p>
+      <p className="mt-3 font-light leading-[1.7]">Students may enter a project before all approval documents are collected. Required approvals must be obtained before the research begins, where applicable. A project cannot be accepted for the symposium until the required documentation has been submitted and verified.</p>
+      <p className="mt-3 font-light leading-[1.7]">Students, parents or guardians, advisors, schools, and research institutions remain responsible for planning, supervising, and approving the research. For university-based human-subjects research, students must provide the university&apos;s official IRB approval or exemption documentation. Student-created summaries or informal mentor letters do not replace official institutional records.</p>
+      <p className="mt-3 font-light leading-[1.7]">Chapters may conduct an eligibility or safety review and may set additional requirements. Students should contact their chapter before beginning regulated work.</p>
+
+      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Participation responsibilities</h2>
+      <p className="mt-3 font-light leading-[1.7]">Before a project is accepted, ASERS may require separate acknowledgments from the student, a parent or legal guardian, and the teacher or research mentor. These acknowledgments may address supervision, research approvals, venue rules, emergency procedures, and the student&apos;s responsibilities during the symposium.</p>
+      <p className="mt-3 font-light leading-[1.7]">The registration portal and required forms are being prepared. Until they are available, chapter-specific instructions control the documents students must provide.</p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Student contribution</h2>
       <p className="mt-3 font-light leading-[1.7]">Students may conduct research with mentors, universities, companies, or research laboratories. The work submitted to ASERS must clearly represent the student&apos;s own contribution.</p>
@@ -48,7 +55,8 @@ export default function RulesPage() {
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Poster and display safety</h2>
       <p className="mt-3 font-light leading-[1.7]">Students prepare a scientific poster for the poster session. Posters should distinguish student-generated work from material obtained elsewhere and properly credit figures, images, data, and outside sources.</p>
-      <p className="mt-3 font-light leading-[1.7]">Your chapter may publish separate Display &amp; Safety Rules covering poster dimensions, prohibited materials, electrical equipment, biological materials, and other on-site requirements.</p>
+      <p className="mt-3 font-light leading-[1.7]">Physical prototypes, robotics, engineering builds, and interactive computer demonstrations may be displayed when they can be operated safely. At check-in, event volunteers may conduct a brief visual safety check of table setups, including shielding for moving parts and safe electrical connections.</p>
+      <p className="mt-3 font-light leading-[1.7]">Live biological cultures, unsealed chemicals, open flames, and unshielded high-voltage equipment may not be brought into the venue. Projects involving these hazards must use photos, charts, video, or other approved records instead. Chapters may publish additional Display &amp; Safety Rules covering poster dimensions, equipment, biological materials, and other on-site requirements.</p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Research integrity</h2>
       <p className="mt-3 font-light leading-[1.7]">Students are expected to present their research honestly and accurately. Fabrication, falsification, plagiarism, misrepresentation of student contribution, undisclosed conflicts, or intentionally misleading presentation of results may result in disqualification or removal from award consideration.</p>

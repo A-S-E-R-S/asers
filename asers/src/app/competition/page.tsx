@@ -37,6 +37,13 @@ export default function CompetitionPage() {
         </div>
       </section>
 
+      <section className="mt-8 border-l-4 border-brand bg-strip px-5 py-5">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">A conference-style research event</h2>
+        <p className="mt-3 font-light leading-[1.7]">ASERS is a presentation and evaluation venue, similar to a scientific conference. We do not design, fund, supervise, or approve a student&apos;s research. Students, parents or guardians, advisors, schools, and research institutions remain responsible for the work and the approvals it requires.</p>
+        <p className="mt-3 font-light leading-[1.7]">Students may enter before every approval document has been collected. A project cannot be accepted for the symposium until required institutional documentation is submitted and verified. The full rules explain what may be required and what can be displayed.</p>
+        <Link href="/competition/rules#research-approval" className="mt-4 inline-block font-medium text-brand underline">Read the research and display rules →</Link>
+      </section>
+
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">The competition journey</h2>
       <div className="mt-5 divide-y-2 divide-brand-pale border-y-2 border-brand-pale">
         {stages.map(([number, title, body]) => (

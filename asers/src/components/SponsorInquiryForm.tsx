@@ -2,14 +2,17 @@
 
 import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { chapters } from "@/data/chapters";
 
-export default function SponsorInquiryForm() {
+export default function SponsorInquiryForm({
+  chapters,
+}: {
+  chapters: { slug: string; name: string; shortName: string }[];
+}) {
   const searchParams = useSearchParams();
   const requestedChapter = searchParams.get("chapter") ?? "";
   const chapter = useMemo(
     () => chapters.find((item) => item.slug === requestedChapter),
-    [requestedChapter]
+    [requestedChapter, chapters]
   );
   return (
     <form onSubmit={(event) => event.preventDefault()} className="mt-6 space-y-5">

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { chapters, impactStats } from "@/data/chapters";
+import { impactStats } from "@/data/chapters";
+import { getPublishedChapters } from "@/lib/chapters";
 import HeroCarousel from "@/components/HeroCarousel";
 
 export const metadata: Metadata = {
@@ -10,7 +11,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-export default function Home() {
+export default async function Home() {
+  const chapters = await getPublishedChapters();
   return (
     <>
       {/* Hero */}

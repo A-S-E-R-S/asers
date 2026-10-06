@@ -89,8 +89,8 @@ export default function JudgingPage() {
 
       <section id="judge-registration" className="mt-14 border-2 border-dashed border-brand p-7">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Register as an ASERS judge</h2>
-        <p className="mt-3 font-light leading-[1.7]">Judge registration is opening soon. We are bringing together scientists, engineers, faculty, graduate researchers, and other qualified STEM professionals to work with local chapters and the National Symposium.</p>
-        <span className="mt-5 inline-block border-2 border-brand-pale px-5 py-2 text-sm font-medium text-ink-soft">Registration form coming soon</span>
+        <p className="mt-3 font-light leading-[1.7]">We are bringing together scientists, engineers, faculty, graduate researchers, and other qualified STEM professionals to work with local chapters and the National Symposium. Judges register through the chapter they want to judge for, and remote judges can sign up with more than one chapter using the same account.</p>
+        <Link href="/register/judge" className="mt-5 inline-block bg-brand px-6 py-3 font-medium text-white transition hover:bg-brand-dark">Register as a judge</Link>
       </section>
       <div className="mt-8"><Link href="/about" className="font-medium text-brand underline">Questions? Learn more about ASERS</Link></div>
     </div>

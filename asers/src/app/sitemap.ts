@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getPublishedChapters } from "@/lib/chapters";
 
 const routes = [
   "",
@@ -8,12 +9,15 @@ const routes = [
   "/judging",
   "/national-symposium",
   "/chapters",
-  "/chapters/new-jersey",
+  "/register",
   "/donate",
 ];
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const chapters = await getPublishedChapters();
+  return [...routes, ...chapters.map((c) => `/chapters/${c.slug}`)].map((route) => ({
     url: "https://asers.org" + route,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",

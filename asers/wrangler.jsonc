@@ -50,6 +50,7 @@
 		{
 			"binding": "DB",
 			"database_name": "asers",
+			"database_id": "76ec8f62-c043-4225-b147-ee88193ce7cd",
 			"migrations_dir": "migrations"
 		}
 	],
@@ -86,13 +87,6 @@
 		{
 			"pattern": "nj.asers.org",
 			"custom_domain": true
-		}
-	],
-	"d1_databases": [
-		{
-			"binding": "asers",
-			"database_name": "asers",
-			"database_id": "76ec8f62-c043-4225-b147-ee88193ce7cd"
 		}
 	]
 	/**

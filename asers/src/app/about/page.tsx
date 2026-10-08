@@ -9,12 +9,11 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-// TODO: confirm titles / add-remove people for the national org.
 const team = [
   { name: "Subhi Stephan", role: "Technology Committee Chair", image: "/images/people/subhi_stephan.png" },
-  { name: "Paridhi Tyagi", role: "Participant Outreach Chair", image: "/images/people/pari_tyagi.jpg" },
-  { name: "Daniel Han", role: "Logistics & Fundraising", image: "/images/people/daniel_han.jpg" },
-  { name: "Ahisha Ravi", role: "Logistics & Fundraising, Marketing", image: "/images/people/ahisha_ravi.jpg" },
+  { name: "Paridhi Tyagi", role: "Secretary, Chapter Development Chair", image: "/images/people/pari_tyagi.jpg" },
+  { name: "Daniel Han", role: "Treasurer, Finance Chair", image: "/images/people/daniel_han.jpg" },
+  { name: "Ahisha Ravi", role: "President, Logistics Chair", image: "/images/people/ahisha_ravi.jpg" },
   { name: "Aaron Yu", role: "Judging Outreach Chair", image: "/images/people/aaron_yu.jpg" },
 ];
 
@@ -61,7 +60,7 @@ export default function AboutPage() {
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Students run ASERS</h2>
       <p className="mt-3 font-light leading-[1.6]">
-        ASERS is planned and run by high school students across judging, outreach,
+        ASERS is planned and run by high school and undergraduate students across judging, outreach,
         technology, logistics, fundraising, marketing, and chapter development.
       </p>
       <p className="mt-3 font-light leading-[1.6]">

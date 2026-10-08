@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const stages = [
-  ["01", "Submit", "Research paper review helps judges understand your methods, evidence, and research record."],
+  ["01", "Submit", "A short 1–2 page research article helps judges understand your methods, evidence, and research record. It is not a full-length research paper."],
   ["02", "Present", "Give a timed oral presentation, answer questions, and discuss your work at a poster session."],
   ["03", "Improve", "Receive structured feedback from scientists, including a strength, limitation, alternative explanation, and next step."],
   ["04", "Advance", "The strongest projects from each category move to a cross-category final in the auditorium for the top awards."],
@@ -32,7 +32,7 @@ export default async function CompetitionPage() {
           <p><strong className="font-medium">Grades:</strong> 9–12</p>
           <p><strong className="font-medium">Projects:</strong> Individual or team</p>
           <p><strong className="font-medium">Research:</strong> Original experimental, computational, engineering, or theoretical work</p>
-          <p><strong className="font-medium">Required:</strong> Paper, oral presentation, and poster</p>
+          <p><strong className="font-medium">Required:</strong> 1–2 page research article, oral presentation, and poster</p>
           <p><strong className="font-medium">Safety review:</strong> Required where applicable</p>
           <p><strong className="font-medium">Registration:</strong> Through your local chapter</p>
         </div>

@@ -42,13 +42,7 @@ export const sponsorTiers: SponsorTier[] = [
     from: "#f3d27a",
     to: "#c9982b",
     text: "#4a3405",
-    sponsors: [
-      {
-        name: "Beyond Young Academy",
-        logo: "/images/sponsors/beyond-young.png",
-        url: "https://beyondyoung.org",
-      },
-    ],
+    sponsors: [],
   },
   {
     name: "Silver",
@@ -57,14 +51,7 @@ export const sponsorTiers: SponsorTier[] = [
     from: "#e3e5e8",
     to: "#a9adb4",
     text: "#33363b",
-    sponsors: [
-      {
-        name: "Art of Problem Solving",
-        logo: "/images/sponsors/aops.png",
-        url: "https://artofproblemsolving.com",
-      },
-      { name: "Clemenza's Brick Oven Pizza" },
-    ],
+    sponsors: [],
   },
   {
     name: "Bronze",
@@ -73,7 +60,19 @@ export const sponsorTiers: SponsorTier[] = [
     from: "#e0a370",
     to: "#a5642f",
     text: "#3e2410",
-    sponsors: [],
+    sponsors: [
+      {
+        name: "Beyond Young Academy",
+        logo: "/images/sponsors/beyond-young.png",
+        url: "https://beyondyoung.org",
+      },
+      {
+        name: "Art of Problem Solving",
+        logo: "/images/sponsors/aops.png",
+        url: "https://artofproblemsolving.com",
+      },
+      { name: "Clemenza's Brick Oven Pizza" },
+    ],
   },
   {
     name: "Supporter",

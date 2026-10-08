@@ -142,8 +142,8 @@ export default async function DonatePage() {
 
       <section id="special-awards" className="mt-14 scroll-mt-8">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Sponsor a special award</h2>
-        <p className="mt-3 font-light leading-[1.6]">Organizations can propose a named award recognizing strong research in an area connected to their mission. Special awards typically begin at $500, with most of the contribution supporting the student prize.</p>
-        <p className="mt-3 font-light leading-[1.6]">Sponsors may help define the scientific focus and nominate qualified judges. ASERS reviews all criteria, judge assignments, and conflicts of interest before judging. Special-award sponsors do not select Grand Award winners.</p>
+        <p className="mt-3 font-light leading-[1.6]">Organizations can propose a named award recognizing strong research in an area connected to their mission. Special awards typically begin at $250, with most of the contribution supporting the student prize.</p>
+        <p className="mt-3 font-light leading-[1.6]">The sponsoring organization&apos;s name is included in the award title for that fair. Sponsors may help define the scientific focus and nominate qualified judges. ASERS reviews all criteria, judge assignments, and conflicts of interest before judging. Special-award sponsors do not select Grand Award winners.</p>
         <div className="mt-5 grid gap-2 sm:grid-cols-2">
           {["Excellence in Artificial Intelligence", "Cancer Research Award", "Environmental Sustainability Award", "Biomedical Innovation Award", "Statistical Methods Award", "Engineering Design Award", "Computational Science Award", "Scientific Communication Award"].map((award) => <div key={award} className="border border-brand-pale px-4 py-3 text-sm font-light">{award}</div>)}
         </div>

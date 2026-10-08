@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const evaluation = [
-  ["Research paper", "Reviewers check the research record and flag questions for the event."],
+  ["Research article", "Reviewers read the short research article and flag questions for the event."],
   ["Oral presentation", "Students present and answer questions from one panel."],
   ["Poster session", "A separate panel examines the methods, figures, results, and claims."],
 ];
@@ -48,6 +48,24 @@ export default function JudgingPage() {
       </div>
       <p className="mt-4 font-light leading-[1.7]">Oral and poster judges score independently before seeing the other group&apos;s evaluations.</p>
 
+      <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">Scoring rubric</h2>
+      <p className="mt-3 font-light leading-[1.7]">Judges score each project on a consistent five-part rubric. Chapters may publish additional local scoring details, but the national criteria are:</p>
+      <div className="mt-5 divide-y-2 divide-brand-pale border-y-2 border-brand-pale">
+        {[
+          ["Research question and significance", "Is the question clear, meaningful, and appropriate for the project?"],
+          ["Methods and rigor", "Are the methods appropriate, careful, and sufficiently explained?"],
+          ["Evidence and results", "Does the project present relevant evidence and results accurately?"],
+          ["Analysis and conclusions", "Do the interpretation and conclusions follow from the evidence?"],
+          ["Student understanding and communication", "Can the student explain the work, its limits, and what they contributed?"],
+        ].map(([title, body], index) => (
+          <div key={title} className="grid gap-2 py-4 sm:grid-cols-[40px_230px_1fr]">
+            <p className="font-condensed text-xl text-brand">0{index + 1}</p>
+            <h3 className="font-medium">{title}</h3>
+            <p className="font-light leading-[1.7]">{body}</p>
+          </div>
+        ))}
+      </div>
+
       <h2 className="mt-14 text-2xl font-bold tracking-[-0.015em]">What matters</h2>
       <p className="mt-3 font-light leading-[1.7]">Judges focus on scientific quality, evidence, original contribution, and the student&apos;s understanding of the work. They ask what the student actually contributed and whether the conclusion follows from the evidence.</p>
       <p className="mt-3 font-light leading-[1.7]">Large datasets, expensive equipment, polished graphics, and mentor prestige do not earn points by themselves.</p>
@@ -70,7 +88,7 @@ export default function JudgingPage() {
       <ul className="mt-5 grid gap-2 sm:grid-cols-2">
         {safeguards.map((item) => <li key={item} className="border border-brand-pale px-4 py-3 text-sm font-light">{item}</li>)}
       </ul>
-      <p className="mt-4 font-light leading-[1.7]">Judges receive guidance on evidence, student contribution, limitations, conflicts, and productive discussion. Consensus is not required.</p>
+      <p className="mt-4 font-light leading-[1.7]">Judges receive guidance on evidence, student contribution, limitations, conflicts, and productive discussion. Consensus is not required during regular judging. Final-round winners are selected after finalist discussion and require consensus.</p>
 
       <section className="mt-10 border-2 border-brand-pale px-5 py-5">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Judge eligibility and conflicts of interest</h2>
@@ -84,7 +102,7 @@ export default function JudgingPage() {
       <section className="mt-14 border-2 border-brand-pale bg-strip px-6 py-7">
         <p className="font-condensed text-lg uppercase tracking-tight text-brand">Top awards</p>
         <h2 className="mt-1 text-2xl font-bold tracking-[-0.015em]">The cross-category final</h2>
-        <p className="mt-3 font-light leading-[1.7]">The strongest projects from each category advance to a final round in the auditorium. Finalists rank projects independently, discuss strengths, weaknesses, and unresolved questions, then submit a final private ranking for the highest awards across categories.</p>
+        <p className="mt-3 font-light leading-[1.7]">The strongest projects from each category advance to a final round in the auditorium. Finalists discuss strengths, weaknesses, and unresolved questions, then reach consensus on the winners of the highest awards across categories.</p>
       </section>
 
       <section id="judge-registration" className="mt-14 border-2 border-dashed border-brand p-7">

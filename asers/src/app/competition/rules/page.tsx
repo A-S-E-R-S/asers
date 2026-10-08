@@ -11,7 +11,7 @@ const requirements = [
   ["Grades", "9–12 through a participating ASERS chapter."],
   ["Projects", "Individual or team projects meeting the local chapter's eligibility requirements."],
   ["Research", "Original experimental, computational, engineering, or theoretical work."],
-  ["Required materials", "Research paper, oral presentation, and scientific poster."],
+  ["Required materials", "A 1–2 page research article, oral presentation, and scientific poster."],
   ["Registration", "Through the student's local ASERS chapter."],
 ];
 
@@ -32,9 +32,9 @@ export default function RulesPage() {
       <h2 id="research-approval" className="mt-12 scroll-mt-8 text-2xl font-bold tracking-[-0.015em]">Research approval and responsibility</h2>
       <p className="mt-3 font-light leading-[1.7]">Projects involving human participants, vertebrate animals, biological materials, hazardous chemicals, or other regulated research may require approval before experimentation begins.</p>
       <p className="mt-3 font-light leading-[1.7]">ASERS is a conference-style presentation and evaluation venue. We do not design, fund, supervise, or approve student research, and we do not replace the school, mentor, university, IRB, SRC, IACUC, or other responsible review body.</p>
-      <p className="mt-3 font-light leading-[1.7]">Students may enter a project before all approval documents are collected. Required approvals must be obtained before the research begins, where applicable. A project cannot be accepted for the symposium until the required documentation has been submitted and verified.</p>
+      <p className="mt-3 font-light leading-[1.7]">Students submit the required approval documentation when they register for the symposium. Required approvals must still be obtained before the research begins, where applicable, and the documentation must be submitted and verified before the project is accepted.</p>
       <p className="mt-3 font-light leading-[1.7]">Students, parents or guardians, advisors, schools, and research institutions remain responsible for planning, supervising, and approving the research. For university-based human-subjects research, students must provide the university&apos;s official IRB approval or exemption documentation. Student-created summaries or informal mentor letters do not replace official institutional records.</p>
-      <p className="mt-3 font-light leading-[1.7]">Chapters may conduct an eligibility or safety review and may set additional requirements. Students should contact their chapter before beginning regulated work.</p>
+      <p className="mt-3 font-light leading-[1.7]">Chapters may conduct an eligibility or safety review and may set additional requirements. Students should submit the required documentation with their symposium registration.</p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Participation responsibilities</h2>
       <p className="mt-3 font-light leading-[1.7]">Before a project is accepted, ASERS may require separate acknowledgments from the student, a parent or legal guardian, and the teacher or research mentor. These acknowledgments may address supervision, research approvals, venue rules, emergency procedures, and the student&apos;s responsibilities during the symposium.</p>
@@ -47,8 +47,8 @@ export default function RulesPage() {
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Continuing projects</h2>
       <p className="mt-3 font-light leading-[1.7]">Students may continue research from a previous year if the new work represents a meaningful extension of the earlier project. Previous work should be identified clearly so judges can distinguish research completed during the current competition cycle.</p>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Research paper</h2>
-      <p className="mt-3 font-light leading-[1.7]">Students submit a research paper before the symposium. Papers support pre-event review and help judges understand and verify the work. Students should cite outside sources clearly and identify assistance from mentors or collaborators.</p>
+      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Research article</h2>
+      <p className="mt-3 font-light leading-[1.7]">Students submit a short 1–2 page research article when they register. This article supports pre-event review and helps judges understand the work; it is not intended to be a full-length research paper. Students should cite outside sources clearly and identify assistance from mentors or collaborators.</p>
 
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Oral presentation</h2>
       <p className="mt-3 font-light leading-[1.7]">Students present their research in a timed category session followed by judge questions. Presentations should focus on the student&apos;s own research, including the question, methods, results, interpretation, limitations, and next steps.</p>

@@ -39,7 +39,6 @@
 		}
 	},
 	"upload_source_maps": true,
-
 	/**
 	 * Custom domains — uncomment once the asers.org zone is added to the
 	 * Cloudflare account (Dashboard → Add a domain), otherwise deploy fails.
@@ -48,11 +47,26 @@
 	 * this Worker; src/middleware.ts then 301s it to asers.org/chapters/<slug>.
 	 */
 	"routes": [
-		{ "pattern": "asers.org", "custom_domain": true },
-		{ "pattern": "www.asers.org", "custom_domain": true },
-		{ "pattern": "nj.asers.org", "custom_domain": true }
+		{
+			"pattern": "asers.org",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.asers.org",
+			"custom_domain": true
+		},
+		{
+			"pattern": "nj.asers.org",
+			"custom_domain": true
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "asers",
+			"database_name": "asers",
+			"database_id": "76ec8f62-c043-4225-b147-ee88193ce7cd"
+		}
 	]
-
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

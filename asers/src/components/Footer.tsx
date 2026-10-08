@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { chapters } from "@/data/chapters";
+import { getPublishedChapters } from "@/lib/chapters";
 
-export default function Footer() {
+export default async function Footer() {
+  const chapters = await getPublishedChapters();
   return (
     <footer className="bg-brand text-white">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">

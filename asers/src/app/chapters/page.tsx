@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { chapters } from "@/data/chapters";
+import { getPublishedChapters } from "@/lib/chapters";
 
 export const metadata: Metadata = {
   title: "Chapters",
@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/chapters" },
 };
 
-export default function ChaptersPage() {
+export default async function ChaptersPage() {
+  const chapters = await getPublishedChapters();
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Chapters</p>

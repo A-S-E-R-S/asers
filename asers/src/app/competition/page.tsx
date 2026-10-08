@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { chapters } from "@/data/chapters";
+import { getPublishedChapters } from "@/lib/chapters";
 
 export const metadata: Metadata = {
   title: "Competition",
@@ -15,7 +15,8 @@ const stages = [
   ["04", "Advance", "The strongest projects from each category move to a cross-category final in the auditorium for the top awards."],
 ];
 
-export default function CompetitionPage() {
+export default async function CompetitionPage() {
+  const chapters = await getPublishedChapters();
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Competition</p>
@@ -67,7 +68,7 @@ export default function CompetitionPage() {
         {chapters.map((chapter) => (
           <div key={chapter.slug} className="flex flex-wrap items-center justify-between gap-3 py-4">
             <span>{chapter.name} ({chapter.shortName})</span>
-            {chapter.site ? <a className="font-medium text-brand underline" href={chapter.site + "/register/student"}>Register</a> : <span className="text-sm font-light">Registration opening soon</span>}
+            {chapter.regOpen.student ? <Link className="font-medium text-brand underline" href={`/register/${chapter.slug}/student`}>Register</Link> : <span className="text-sm font-light">Registration opening soon</span>}
           </div>
         ))}
       </div>

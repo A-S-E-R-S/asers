@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { getAdminScope, getCurrentUser, isAnyAdmin } from "@/lib/auth";
 
 const navLinks = [
   { href: "/chapters", label: "Chapters" },
@@ -9,11 +10,39 @@ const navLinks = [
   { href: "/about", label: "About" },
 ];
 
-export default function Nav() {
+export default async function Nav() {
+  const user = await getCurrentUser();
+  const admin = isAnyAdmin(await getAdminScope(user));
+
   return (
     <header>
-      {/* Pale-blue rule */}
-      <div className="h-[10px] w-full bg-brand-pale" />
+      {/* Pale-blue rule with account links */}
+      <div className="flex min-h-[10px] w-full justify-end gap-5 bg-brand-pale px-4 text-[13px] font-medium text-brand sm:px-6 md:px-[56px]">
+        {user ? (
+          <>
+            {admin && (
+              <Link href="/admin" className="py-1 hover:underline">
+                Admin
+              </Link>
+            )}
+            <Link href="/dashboard" className="py-1 hover:underline">
+              Dashboard
+            </Link>
+            <Link href="/account" className="py-1 hover:underline">
+              {user.firstName}
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link href="/login" className="py-1 hover:underline">
+              Log in
+            </Link>
+            <Link href="/register" className="py-1 hover:underline">
+              Register
+            </Link>
+          </>
+        )}
+      </div>
 
       {/* Main nav */}
       <div className="flex w-full flex-col gap-5 bg-brand px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between md:gap-10 md:px-[56px] md:py-[26px]">

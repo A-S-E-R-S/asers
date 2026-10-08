@@ -3,6 +3,7 @@ import Image from "next/image";
 import { sponsorTiers } from "@/data/sponsors";
 import { Suspense } from "react"
 import SponsorInquiryForm from "@/components/SponsorInquiryForm";
+import { getPublishedChapters } from "@/lib/chapters";
 
 export const metadata: Metadata = {
   title: "Donate",
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/donate" },
 };
 
-export default function DonatePage() {
+export default async function DonatePage() {
+  const chapters = (await getPublishedChapters()).map((c) => ({ slug: c.slug, name: c.name, shortName: c.shortName }));
   return (
     <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">Donate</p>
@@ -162,7 +164,7 @@ export default function DonatePage() {
         Donations are processed by ASERS, not by local chapters.
       </p>
       <Suspense>
-      <SponsorInquiryForm />
+      <SponsorInquiryForm chapters={chapters} />
       </Suspense>
     </div>
   );

@@ -40,6 +40,34 @@
 	},
 	"upload_source_maps": true,
 	/**
+	 * Registration + admin data. Schema lives in ./migrations.
+	 *   Local:  npm run db:migrate:local
+	 *   Remote: npm run db:migrate:remote
+	 * Before the first deploy: `npx wrangler d1 create asers` and add the
+	 * printed "database_id" below.
+	 */
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "asers",
+			"migrations_dir": "migrations"
+		}
+	],
+
+	/**
+	 * Transactional email (verification codes, password resets, approvals).
+	 * asers.org must be onboarded: `npx wrangler email sending enable asers.org`.
+	 * If sending fails, the message is logged instead (see src/lib/email.ts).
+	 */
+	"send_email": [{ "name": "EMAIL" }],
+
+	"vars": {
+		"APP_URL": "https://asers.org",
+		"EMAIL_FROM": "no-reply@asers.org",
+		"EMAIL_FROM_NAME": "ASERS"
+	},
+
+	/**
 	 * Custom domains — uncomment once the asers.org zone is added to the
 	 * Cloudflare account (Dashboard → Add a domain), otherwise deploy fails.
 	 *

@@ -43,20 +43,21 @@ export default async function Nav() {
           <div className="flex items-center gap-2 sm:gap-3">
             {user ? (
               <>
-                {admin && (
+                {admin ? (
                   <Link
                     href="/admin"
                     className="inline-flex min-h-12 items-center justify-center border-2 border-white px-4 font-condensed text-[17px] uppercase tracking-[0.02em] text-white transition hover:bg-white hover:text-brand sm:px-5 sm:text-[19px]"
                   >
                     Admin
                   </Link>
+                ) : (
+                  <Link
+                    href="/dashboard"
+                    className="inline-flex min-h-12 items-center justify-center bg-white px-4 font-condensed text-[17px] uppercase tracking-[0.02em] text-brand transition hover:bg-brand-pale sm:px-5 sm:text-[19px]"
+                  >
+                    Dashboard
+                  </Link>
                 )}
-                <Link
-                  href="/dashboard"
-                  className="inline-flex min-h-12 items-center justify-center bg-white px-4 font-condensed text-[17px] uppercase tracking-[0.02em] text-brand transition hover:bg-brand-pale sm:px-5 sm:text-[19px]"
-                >
-                  Dashboard
-                </Link>
                 <Link
                   href="/account"
                   className="hidden text-sm font-medium text-white hover:text-brand-pale sm:inline"

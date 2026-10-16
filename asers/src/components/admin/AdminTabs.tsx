@@ -10,7 +10,7 @@ export default function AdminTabs({ tabs }: { tabs: { href: string; label: strin
     .filter((t) => path === t.href || path.startsWith(`${t.href}/`))
     .sort((a, b) => b.href.length - a.href.length)[0]?.href;
   return (
-    <nav className="mt-5 flex gap-1 overflow-x-auto border-b-2 border-brand-pale text-sm">
+    <nav className="mt-5 flex flex-wrap gap-x-1 gap-y-0 border-b-2 border-brand-pale text-sm">
       {tabs.map((t) => (
         <Link
           key={t.href}

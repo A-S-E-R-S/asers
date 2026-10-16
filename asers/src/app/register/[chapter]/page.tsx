@@ -11,7 +11,7 @@ export const metadata: Metadata = { title: "Register" };
 
 /**
  * /register/<chapter>  -> pick a role for that chapter
- * /register/<role>     -> pick a chapter for that role (njsrs.org-style URLs)
+ * /register/<role>     -> pick a chapter for that role
  */
 export default async function RegisterChapterPage({ params }: Props) {
   const { chapter: param } = await params;

@@ -50,8 +50,8 @@ export default async function Footer() {
               <a className="hover:underline" href="mailto:contact@asers.org">contact@asers.org</a>
             </li>
             <li>
-              <a className="hover:underline" href="mailto:fairdirector@njsrs.org">
-                fairdirector@njsrs.org (NJ)
+              <a className="hover:underline" href="mailto:newjersey@asers.org">
+                newjersey@asers.org (NJ)
               </a>
             </li>
             <li>

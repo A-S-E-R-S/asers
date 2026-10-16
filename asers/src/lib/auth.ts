@@ -179,7 +179,7 @@ export async function clientIp(): Promise<string> {
 
 // ---------------------------------------------------------------- email codes / tokens
 
-export async function issueVerificationCode(user: { id: string; email: string }): Promise<void> {
+export async function issueVerificationCode(user: { id: string; email: string }, replyTo?: string): Promise<void> {
   const code = randomCode();
   await run(
     `INSERT INTO auth_codes (user_id, purpose, code_hash, expires_at, attempts, created_at)
@@ -192,7 +192,7 @@ export async function issueVerificationCode(user: { id: string; email: string })
     Date.now() + VERIFY_TTL_MS,
     Date.now()
   );
-  await sendEmail(verificationEmail(user.email, code));
+  await sendEmail(verificationEmail(user.email, code, replyTo));
 }
 
 export type CodeResult = "ok" | "invalid" | "expired" | "locked";

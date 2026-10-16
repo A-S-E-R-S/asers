@@ -1,7 +1,7 @@
 # asers.org
 
 Website for the **American Science and Engineering Research Symposium**, the national
-umbrella org for state chapters like [NJSRS](https://njsrs.org) (New Jersey).
+umbrella organization for local state chapters, including New Jersey.
 
 Built with Next.js (App Router) and deployed to **Cloudflare Workers** via
 [OpenNext](https://opennext.js.org/cloudflare).
@@ -59,7 +59,7 @@ First deploy only:
 
 ### Chapter subdomains
 
-`nj.asers.org` → **301** → `asers.org/chapters/new-jersey`
+`<chapter>.asers.org` → **301** → `asers.org/chapters/<chapter>`
 
 How it works:
 
@@ -81,7 +81,7 @@ To add a new chapter (e.g. New York):
 
 ## Registration & admin
 
-Modeled on last year's njsrs.org flow, but per chapter:
+Modeled on last year's chapter registration flow, but per chapter:
 
 | Who | Registers at | Approved by | Dashboard |
 | --- | --- | --- | --- |

@@ -7,8 +7,8 @@ interface __BaseEnv_CloudflareEnv {
 	IMAGES: ImagesBinding;
 	ASSETS: Fetcher;
 	APP_URL: "https://asers.org";
-	EMAIL_FROM: "no-reply@asers.org";
-	EMAIL_FROM_NAME: "ASERS";
+	EMAIL_FROM: "registration@asers.org";
+	EMAIL_FROM_NAME: "ASERS Registration";
 	WORKER_SELF_REFERENCE: Service<typeof import("./.open-next/worker").default>;
 }
 declare namespace Cloudflare {

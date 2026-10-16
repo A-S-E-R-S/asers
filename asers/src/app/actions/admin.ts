@@ -109,7 +109,8 @@ export async function setRegistrationStatusAction(_prev: ActionState, fd: FormDa
         ROLE_LABELS[reg.role],
         chapter?.shortName ?? "ASERS",
         status,
-        `${await appUrl()}/dashboard/${ctx.slug}`
+        `${await appUrl()}/dashboard/${ctx.slug}`,
+        chapter?.email ?? undefined
       )
     );
   }
@@ -282,7 +283,8 @@ export async function sendPasswordLinkAction(_prev: ActionState, fd: FormData): 
         target.email,
         `${ctx.user.firstName} ${ctx.user.lastName}`,
         chapter?.shortName ?? "ASERS",
-        await issueResetLink(userId, SEVEN_DAYS)
+        await issueResetLink(userId, SEVEN_DAYS),
+        chapter?.email ?? undefined
       )
     );
   }
@@ -345,7 +347,8 @@ export async function addJudgeAction(_prev: ActionState, fd: FormData): Promise<
         email,
         `${ctx.user.firstName} ${ctx.user.lastName}`,
         `judge for ${chapter?.shortName ?? "ASERS"}`,
-        await issueResetLink(u.id, SEVEN_DAYS)
+        await issueResetLink(u.id, SEVEN_DAYS),
+        chapter?.email ?? undefined
       )
     );
   }

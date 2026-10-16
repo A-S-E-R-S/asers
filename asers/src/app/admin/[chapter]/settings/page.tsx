@@ -80,7 +80,7 @@ export default async function ChapterSettingsPage({ params }: Props) {
                 ["Name", c.name],
                 ["Short name", c.shortName],
                 ["Full name", c.fullName],
-                ["Subdomain", c.subdomain ? `${c.subdomain}.asers.org` : null],
+                ["Subdomain", c.subdomain],
                 ["Published", c.published ? "Yes" : "No (draft)"],
               ]}
             />

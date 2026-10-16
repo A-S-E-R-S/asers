@@ -173,7 +173,8 @@ export async function sraSetStudentStatusAction(_prev: ActionState, fd: FormData
         ROLE_LABELS.student,
         chapter?.shortName ?? "ASERS",
         status,
-        `${await appUrl()}/dashboard/${chapterSlug}`
+        `${await appUrl()}/dashboard/${chapterSlug}`,
+        chapter?.email ?? undefined
       )
     );
   }

@@ -147,7 +147,7 @@ INSERT INTO chapters (
 ) VALUES (
   'new-jersey', 'nj', 'New Jersey', 'NJSRS', 'New Jersey Science Research Symposium',
   'Our founding chapter. NJSRS is a premier science research competition open to any high school student attending a public or private high school in New Jersey, featuring oral presentations judged by STEM professionals, a finals round, a poster session, and sponsored special awards.',
-  'https://njsrs.org', 'fairdirector@njsrs.org',
+  NULL, 'newjersey@asers.org',
   'Millburn High School, 462 Millburn Ave, Millburn, NJ 07041', '2025', '$30 per student',
   '["In Person (Full Day, 8:30 AM - 3:30 PM)","In Person (Morning Only, 8:30 AM - 12:00 PM)","Remote (Morning Only, 8:30 AM - 12:00 PM)"]',
   1, 0

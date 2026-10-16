@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Chapter subdomains go to their chapter page on the apex domain:
-//   nj.asers.org/* -> https://asers.org/chapters/nj -> /chapters/new-jersey
+//   <chapter>.asers.org/* -> https://asers.org/chapters/<chapter>
 // The chapter page resolves the subdomain to the chapter's slug (chapters live
 // in D1, so this stays in sync with whatever admins configure). Each subdomain
 // must also reach this Worker (custom-domain route in wrangler.jsonc, or a

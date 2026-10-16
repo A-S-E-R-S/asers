@@ -49,15 +49,6 @@ export default async function ChapterPage({ params }: Props) {
       </a>,
     ]);
   }
-  if (chapter.site) {
-    facts.push([
-      "Website",
-      <a key="site" className="font-medium text-brand underline" href={chapter.site}>
-        {chapter.site.replace(/^https?:\/\//, "")}
-      </a>,
-    ]);
-  }
-
   const anyOpen = chapter.regOpen.student || chapter.regOpen.sra || chapter.regOpen.judge;
 
   return (
@@ -73,7 +64,7 @@ export default async function ChapterPage({ params }: Props) {
         </div>
       )}
       <p className="font-condensed text-lg uppercase tracking-tight text-brand">
-        ASERS Chapter{chapter.subdomain ? ` · ${chapter.subdomain}.asers.org` : ""}
+        ASERS Chapter
       </p>
       <h1 className="mt-2 text-[46px] font-bold leading-tight tracking-[-0.015em]">
         {chapter.fullName} ({chapter.shortName})

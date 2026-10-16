@@ -197,7 +197,7 @@ async function finish(
   const dashboard = `/dashboard/${chapter.slug}`;
   if (plan.kind === "new") {
     await createSession(plan.id);
-    await issueVerificationCode({ id: plan.id, email: plan.email });
+    await issueVerificationCode({ id: plan.id, email: plan.email }, chapter.email ?? undefined);
     redirect(`/verify?next=${encodeURIComponent(dashboard)}`);
   }
   redirect(dashboard);
@@ -369,7 +369,7 @@ async function notifySras(schoolId: string, studentNames: string, chapter: Chapt
   const sras = await getSchoolSras(schoolId, true);
   const url = `${await appUrl()}/dashboard/${chapter.slug}`;
   for (const s of sras) {
-    await sendEmail(newStudentForSraEmail(s.email, s.first_name, studentNames, chapter.shortName, url));
+    await sendEmail(newStudentForSraEmail(s.email, s.first_name, studentNames, chapter.shortName, url, chapter.email ?? undefined));
   }
 }
 
@@ -383,7 +383,7 @@ async function invitePartner(partnerId: string, inviter: string, chapter: Chapte
   const link = p.password_hash
     ? `${await appUrl()}/dashboard/${chapter.slug}`
     : await issueResetLink(partnerId, SEVEN_DAYS);
-  await sendEmail(partnerInviteEmail(p.email, inviter, chapter.fullName, projectTitle, link));
+  await sendEmail(partnerInviteEmail(p.email, inviter, chapter.fullName, projectTitle, link, chapter.email ?? undefined));
 }
 
 // ---------------------------------------------------------------- SRA

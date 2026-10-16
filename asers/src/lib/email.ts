@@ -14,7 +14,7 @@ export async function appUrl(): Promise<string> {
   return (env().APP_URL || "https://asers.org").replace(/\/$/, "");
 }
 
-type Message = { to: string; subject: string; text: string; html?: string };
+export type Message = { to: string; subject: string; text: string; html?: string; replyTo?: string };
 
 /** Sends via the Cloudflare Email binding; logs the message if that fails or isn't configured. */
 export async function sendEmail(msg: Message): Promise<boolean> {
@@ -23,8 +23,9 @@ export async function sendEmail(msg: Message): Promise<boolean> {
   try {
     if (!e.EMAIL) throw new Error("EMAIL binding not configured");
     await e.EMAIL.send({
-      from: { email: e.EMAIL_FROM || "no-reply@asers.org", name: e.EMAIL_FROM_NAME || "ASERS" },
+      from: { email: e.EMAIL_FROM || "registration@asers.org", name: e.EMAIL_FROM_NAME || "ASERS Registration" },
       to: msg.to,
+      replyTo: msg.replyTo || "contact@asers.org",
       subject: msg.subject,
       text: msg.text,
       html,
@@ -74,9 +75,10 @@ function layout(title: string, body: string): string {
 </td></tr></table></body></html>`;
 }
 
-export function verificationEmail(to: string, code: string): Message {
+export function verificationEmail(to: string, code: string, replyTo?: string): Message {
   return {
     to,
+    replyTo,
     subject: `Your ASERS verification code: ${code}`,
     text: `Your ASERS verification code is ${code}.\n\nEnter it on the verification page to finish setting up your account. The code expires in 30 minutes.\n\nIf you didn't create an ASERS account, you can ignore this email.`,
   };
@@ -95,18 +97,21 @@ export function partnerInviteEmail(
   partnerName: string,
   chapterName: string,
   projectTitle: string,
-  link: string
+  link: string,
+  replyTo?: string
 ): Message {
   return {
     to,
+    replyTo,
     subject: `${partnerName} added you to a ${chapterName} team project`,
     text: `${partnerName} registered your team project "${projectTitle}" for ${chapterName} and listed you as their team partner.\n\nSet a password to access your ASERS dashboard (the link expires in 7 days):\n${link}\n\nIf this wasn't expected, contact your chapter or reply to ${partnerName}.`,
   };
 }
 
-export function accountInviteEmail(to: string, inviter: string, what: string, link: string): Message {
+export function accountInviteEmail(to: string, inviter: string, what: string, link: string, replyTo?: string): Message {
   return {
     to,
+    replyTo,
     subject: "You've been given an ASERS account",
     text: `${inviter} set up an ASERS account for you (${what}).\n\nSet your password here (the link expires in 7 days):\n${link}\n\nThen log in at the same site with this email address.`,
   };
@@ -118,11 +123,13 @@ export function statusEmail(
   roleLabel: string,
   chapterName: string,
   status: "approved" | "rejected",
-  dashboardUrl: string
+  dashboardUrl: string,
+  replyTo?: string
 ): Message {
   const approved = status === "approved";
   return {
     to,
+    replyTo,
     subject: approved
       ? `Your ${chapterName} ${roleLabel} registration is approved`
       : `Update on your ${chapterName} ${roleLabel} registration`,
@@ -137,10 +144,12 @@ export function newStudentForSraEmail(
   sraFirstName: string,
   studentNames: string,
   chapterName: string,
-  dashboardUrl: string
+  dashboardUrl: string,
+  replyTo?: string
 ): Message {
   return {
     to,
+    replyTo,
     subject: `New ${chapterName} student registration to review`,
     text: `Hi ${sraFirstName},\n\n${studentNames} just registered for ${chapterName} from your school and ${studentNames.includes(" and ") ? "are" : "is"} waiting for your approval.\n\nReview and approve students on your SRA dashboard:\n${dashboardUrl}`,
   };

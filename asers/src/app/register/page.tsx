@@ -11,8 +11,13 @@ export const metadata: Metadata = {
 };
 
 
-export default async function RegisterPage() {
+type Props = { searchParams: Promise<{ chapter?: string }> };
+
+export default async function RegisterPage({ searchParams }: Props) {
   const chapters = await getPublishedChapters();
+  const { chapter: selectedSlug } = await searchParams;
+  const selectedChapter = chapters.find((chapter) => chapter.slug === selectedSlug);
+  const visibleChapters = selectedChapter ? [selectedChapter] : chapters;
 
   return (
     <PageShell
@@ -30,10 +35,13 @@ export default async function RegisterPage() {
         ))}
       </div>
 
-      <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Choose your chapter</h2>
-      {chapters.length === 0 && <p className="mt-4 font-light">No chapters are open yet. Check back soon.</p>}
+      <div className="mt-12 flex flex-wrap items-baseline justify-between gap-3">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">{selectedChapter ? `Register for ${selectedChapter.shortName}` : "Choose your chapter"}</h2>
+        {selectedChapter && <Link href="/register" className="text-sm font-medium text-brand underline">Choose another chapter</Link>}
+      </div>
+      {visibleChapters.length === 0 && <p className="mt-4 font-light">No chapters are open yet. Check back soon.</p>}
       <div className="mt-5 space-y-4">
-        {chapters.map((c) => {
+        {visibleChapters.map((c) => {
           const open = ROLES.filter((r) => c.regOpen[r]);
           return (
             <div key={c.slug} className="border-2 border-brand p-5 sm:p-6">

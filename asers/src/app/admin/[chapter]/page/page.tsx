@@ -29,6 +29,17 @@ export default async function ChapterPageEditor({ params }: Props) {
         <Field label="About the chapter" hint="Longer page text. Leave a blank line between paragraphs.">
           <Textarea name="about" rows={10} defaultValue={c.about} maxLength={20000} />
         </Field>
+        <Field label="Local rules" hint="Shown on the chapter's Rules page. Leave a blank line between paragraphs.">
+          <Textarea name="localRules" rows={10} defaultValue={c.localRules} maxLength={20000} />
+        </Field>
+        <Field label="Past event photos" hint="One per line: image URL or /public path, optionally followed by | caption.">
+          <Textarea
+            name="photos"
+            rows={6}
+            defaultValue={c.photos.map((photo) => `${photo.src}${photo.caption ? ` | ${photo.caption}` : ""}`).join("\n")}
+            maxLength={20000}
+          />
+        </Field>
         <div className="grid gap-5 sm:grid-cols-2">
           <Field label="Event date">
             <Input name="eventDate" type="date" defaultValue={c.eventDate ?? ""} />

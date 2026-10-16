@@ -10,6 +10,8 @@ export type ChapterRow = {
   full_name: string;
   description: string;
   about: string;
+  local_rules: string;
+  photos: string;
   announcement: string;
   site: string | null;
   contact_email: string | null;
@@ -29,6 +31,8 @@ export type ChapterRow = {
   updated_at: string;
 };
 
+export type ChapterPhoto = { src: string; caption: string };
+
 export type Chapter = {
   slug: string;
   subdomain: string | null;
@@ -37,6 +41,8 @@ export type Chapter = {
   fullName: string;
   description: string;
   about: string;
+  localRules: string;
+  photos: ChapterPhoto[];
   announcement: string;
   site: string | null;
   email: string | null;
@@ -61,6 +67,10 @@ export function toChapter(r: ChapterRow): Chapter {
     fullName: r.full_name,
     description: r.description,
     about: r.about,
+    localRules: r.local_rules,
+    photos: parseJSON<ChapterPhoto[]>(r.photos, []).filter(
+      (photo) => !!photo && typeof photo.src === "string" && typeof photo.caption === "string"
+    ),
     announcement: r.announcement,
     site: r.site,
     email: r.contact_email,

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import { formatDate, getChapter, getChapterBySubdomain, paragraphs } from "@/lib/chapters";
 import { getAdminScope, getCurrentUser, canManageChapter } from "@/lib/auth";
+import ChapterNav from "@/components/ChapterNav";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -60,7 +61,9 @@ export default async function ChapterPage({ params }: Props) {
   const anyOpen = chapter.regOpen.student || chapter.regOpen.sra || chapter.regOpen.judge;
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+    <>
+      <ChapterNav chapter={chapter} />
+      <div className="mx-auto max-w-4xl px-4 py-16 sm:px-6">
       {(!chapter.published || canEdit) && (
         <div className="mb-8 flex flex-wrap items-center justify-between gap-3 border-l-4 border-brand bg-strip px-4 py-3 text-sm">
           <span>{chapter.published ? "You manage this chapter." : "Draft preview: this chapter isn't published yet."}</span>
@@ -105,8 +108,6 @@ export default async function ChapterPage({ params }: Props) {
         </div>
       )}
 
-      {/* TODO: add photos from this chapter's past fairs to public/images/<slug>/ */}
-
       <section className="mt-12 border-t-2 border-brand-pale pt-8">
         <h2 className="text-2xl font-bold tracking-[-0.015em]">Get involved</h2>
         {!anyOpen && <p className="mt-2 font-light">Registration for the next symposium hasn&apos;t opened yet.</p>}
@@ -146,6 +147,7 @@ export default async function ChapterPage({ params }: Props) {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

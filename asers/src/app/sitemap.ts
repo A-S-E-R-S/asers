@@ -17,7 +17,14 @@ export const dynamic = "force-dynamic";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const chapters = await getPublishedChapters();
-  return [...routes, ...chapters.map((c) => `/chapters/${c.slug}`)].map((route) => ({
+  const chapterRoutes = chapters.flatMap((c) => [
+    `/chapters/${c.slug}`,
+    `/chapters/${c.slug}/event`,
+    `/chapters/${c.slug}/rules`,
+    `/chapters/${c.slug}/photos`,
+  ]);
+
+  return [...routes, ...chapterRoutes].map((route) => ({
     url: "https://asers.org" + route,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",

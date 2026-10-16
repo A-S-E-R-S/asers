@@ -454,6 +454,20 @@ function optionalUrl(fd: FormData, key: string, errors: string[]): string | null
   }
 }
 
+function chapterPhotos(fd: FormData): string {
+  const photos = text(fd, "photos", 20000)
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .slice(0, 50)
+    .map((line) => {
+      const [src, ...captionParts] = line.split("|");
+      return { src: src.trim(), caption: captionParts.join("|").trim() };
+    })
+    .filter((photo) => /^(https?:\/\/|\/)/.test(photo.src));
+  return JSON.stringify(photos);
+}
+
 export async function updateChapterPageAction(_prev: ActionState, fd: FormData): Promise<ActionState> {
   const ctx = await chapterAdmin(fd);
   if (!ctx) return DENIED;
@@ -468,12 +482,14 @@ export async function updateChapterPageAction(_prev: ActionState, fd: FormData):
   if (errors.length) return { error: errors.join(" ") };
 
   await run(
-    `UPDATE chapters SET description = ?, about = ?, announcement = ?, contact_email = ?, site = ?, venue = ?,
+    `UPDATE chapters SET description = ?, about = ?, local_rules = ?, photos = ?, announcement = ?, contact_email = ?, site = ?, venue = ?,
        founded = ?, event_date = ?, event_details = ?, registration_deadline = ?, student_fee = ?,
        updated_at = CURRENT_TIMESTAMP
      WHERE slug = ?`,
     description,
     text(fd, "about", 20000),
+    text(fd, "localRules", 20000),
+    chapterPhotos(fd),
     text(fd, "announcement", 2000),
     contactEmail || null,
     site,

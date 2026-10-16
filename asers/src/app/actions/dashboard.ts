@@ -262,7 +262,6 @@ export async function updateJudgeDetailsAction(_prev: ActionState, fd: FormData)
     knownStudents: knowsStudents ? text(fd, "knownStudents", 2000) : "",
     mentoring,
     mentoringDetails: mentoring ? text(fd, "mentoringDetails", 2000) : "",
-    notes: text(fd, "notes", 2000),
   };
   if (knowsStudents && !next.knownStudents) return { error: "List the students you know." };
   if (mentoring && !next.mentoringDetails) return { error: "Describe who you're mentoring." };

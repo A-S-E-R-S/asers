@@ -109,7 +109,6 @@ export async function GET(req: Request, { params }: Ctx) {
       "Mentoring",
       "Mentoring details",
       "Availability",
-      "Notes",
       "Admin notes",
     ];
     body = rows.map((r) => {
@@ -120,14 +119,11 @@ export async function GET(req: Request, { params }: Ctx) {
         d.institution,
         d.department,
         d.position,
-        d.yearsAtInstitution,
         d.employmentStatus,
         d.degree,
         d.degreeDate,
         d.discipline,
         d.expertise,
-        d.publications,
-        d.patents,
         yn(d.hasJudged),
         d.judgingExperience,
         yn(d.commitAll),
@@ -136,7 +132,6 @@ export async function GET(req: Request, { params }: Ctx) {
         yn(d.mentoring),
         d.mentoringDetails,
         d.availability,
-        d.notes,
         r.admin_notes,
       ];
     });

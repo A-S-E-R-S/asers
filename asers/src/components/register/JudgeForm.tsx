@@ -79,20 +79,15 @@ export default function JudgeForm({
     },
     {
       title: "Institution",
-      fields: ["institution", "yearsAtInstitution", "department", "position", "employmentStatus"],
+      fields: ["institution", "department", "position", "employmentStatus"],
       body: (
         <>
           <FormField name="institution" label="Institution / employer" required>
             <Input name="institution" required maxLength={200} />
           </FormField>
-          <div className="grid gap-5 sm:grid-cols-2">
-            <FormField name="department" label="Department" required>
-              <Input name="department" required maxLength={200} />
-            </FormField>
-            <FormField name="yearsAtInstitution" label="Years at institution">
-              <Input name="yearsAtInstitution" inputMode="numeric" maxLength={20} />
-            </FormField>
-          </div>
+          <FormField name="department" label="Department" required>
+            <Input name="department" required maxLength={200} />
+          </FormField>
           <FormField name="position" label="Current position" required>
             <Input name="position" required maxLength={200} />
           </FormField>
@@ -138,20 +133,6 @@ export default function JudgeForm({
         <FormField name="expertise" label="Primary area of expertise" required>
           <Textarea name="expertise" rows={5} required maxLength={2000} placeholder="Describe your area of expertise..." />
         </FormField>
-      ),
-    },
-    {
-      title: "Publications & patents",
-      fields: ["publications", "patents"],
-      body: (
-        <>
-          <FormField name="publications" label="Publications" hint="Optional.">
-            <Textarea name="publications" rows={5} maxLength={5000} placeholder="List your publications (optional)" />
-          </FormField>
-          <FormField name="patents" label="Patents" hint="Optional.">
-            <Textarea name="patents" rows={3} maxLength={3000} placeholder="List your patents (optional)" />
-          </FormField>
-        </>
       ),
     },
     {
@@ -207,7 +188,7 @@ export default function JudgeForm({
     },
     {
       title: "Availability",
-      fields: ["availability", "notes"],
+      fields: ["availability"],
       body: (
         <>
           {availabilityOptions.length > 0 && (
@@ -227,9 +208,6 @@ export default function JudgeForm({
               <FieldError name="availability" />
             </fieldset>
           )}
-          <FormField name="notes" label="Anything else we should know?" hint="Optional.">
-            <Textarea name="notes" rows={3} maxLength={2000} />
-          </FormField>
         </>
       ),
     },

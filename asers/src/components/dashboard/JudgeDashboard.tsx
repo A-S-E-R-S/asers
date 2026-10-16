@@ -78,9 +78,6 @@ export default function JudgeDashboard({ reg, chapter }: { reg: RegistrationRow;
             <Field label="Mentoring details">
               <Textarea name="mentoringDetails" rows={2} defaultValue={d.mentoringDetails} maxLength={2000} />
             </Field>
-            <Field label="Notes for the organizers">
-              <Textarea name="notes" rows={2} defaultValue={d.notes} maxLength={2000} />
-            </Field>
             <SubmitButton>Save changes</SubmitButton>
           </ActionForm>
         </Card>

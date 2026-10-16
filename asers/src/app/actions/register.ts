@@ -469,7 +469,6 @@ export async function registerJudgeAction(_prev: ActionState, fd: FormData): Pro
   const data: JudgeData = {
     address: str(fd, "address", 300),
     institution: str(fd, "institution", 200),
-    yearsAtInstitution: str(fd, "yearsAtInstitution", 20),
     department: str(fd, "department", 200),
     position: str(fd, "position", 200),
     employmentStatus: str(fd, "employmentStatus"),
@@ -477,8 +476,6 @@ export async function registerJudgeAction(_prev: ActionState, fd: FormData): Pro
     degreeDate: str(fd, "degreeDate", 20),
     discipline: str(fd, "discipline", 200),
     expertise: text(fd, "expertise", 2000),
-    publications: text(fd, "publications", 5000),
-    patents: text(fd, "patents", 3000),
     hasJudged: str(fd, "hasJudged") === "yes",
     judgingExperience: text(fd, "judgingExperience", 2000),
     commitAll: str(fd, "commitAll") === "yes",
@@ -487,7 +484,6 @@ export async function registerJudgeAction(_prev: ActionState, fd: FormData): Pro
     mentoring: str(fd, "mentoring") === "yes",
     mentoringDetails: text(fd, "mentoringDetails", 2000),
     availability: str(fd, "availability", 200),
-    notes: text(fd, "notes", 2000),
   };
 
   if (!data.address) errors.address = "Address is required.";

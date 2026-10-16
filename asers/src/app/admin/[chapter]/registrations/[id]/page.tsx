@@ -191,13 +191,10 @@ export default async function RegistrationDetailPage({ params }: Props) {
             ["Institution", d.institution],
             ["Department", d.department],
             ["Position", d.position],
-            ["Years at institution", d.yearsAtInstitution],
             ["Employment", d.employmentStatus],
             ["Highest degree", [d.degree, d.degreeDate].filter(Boolean).join(", ")],
             ["Discipline", d.discipline],
             ["Expertise", pre(d.expertise)],
-            ["Publications", pre(d.publications)],
-            ["Patents", pre(d.patents)],
             ["Judged before", yesNo(d.hasJudged)],
             ["Judging experience", pre(d.judgingExperience)],
             ["Commits to all projects", yesNo(d.commitAll)],
@@ -206,7 +203,6 @@ export default async function RegistrationDetailPage({ params }: Props) {
             ["Mentoring", yesNo(d.mentoring)],
             ["Mentoring details", pre(d.mentoringDetails)],
             ["Availability", d.availability],
-            ["Notes", pre(d.notes)],
           ]}
         />
       </Card>

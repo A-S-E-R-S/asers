@@ -8,7 +8,8 @@ export type SraData = { title: string; chaperone?: Chaperone };
 export type JudgeData = {
   address: string;
   institution: string;
-  yearsAtInstitution: string;
+  /** Legacy field retained for reading older applications. */
+  yearsAtInstitution?: string;
   department: string;
   position: string;
   employmentStatus: string;
@@ -16,8 +17,9 @@ export type JudgeData = {
   degreeDate: string;
   discipline: string;
   expertise: string;
-  publications: string;
-  patents: string;
+  /** Legacy fields retained for reading older applications. */
+  publications?: string;
+  patents?: string;
   hasJudged: boolean;
   judgingExperience: string;
   commitAll: boolean;
@@ -26,7 +28,8 @@ export type JudgeData = {
   mentoring: boolean;
   mentoringDetails: string;
   availability: string;
-  notes: string;
+  /** Legacy field retained for reading older applications. */
+  notes?: string;
 };
 
 export type RegistrationRow = {

@@ -19,6 +19,7 @@ export default async function ChapterAdminLayout({
     { href: `/admin/${slug}/judging`, label: "Judging" },
     { href: `/admin/${slug}/schools`, label: "Schools" },
     { href: `/admin/${slug}/page`, label: "Chapter page" },
+    { href: `/admin/${slug}/categories`, label: "Categories" },
     { href: `/admin/${slug}/settings`, label: "Settings" },
     { href: `/admin/${slug}/admins`, label: "Admins" },
     { href: `/admin/${slug}/activity`, label: "Activity" },

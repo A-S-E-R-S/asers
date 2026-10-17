@@ -6,7 +6,6 @@ import { Input, Select, Textarea } from "@/components/ui";
 import {
   DESCRIPTION_MAX_WORDS,
   DOMAINS,
-  FOCUSES,
   MAX_DOMAINS,
   METHOD_GROUPS,
   wordCount,
@@ -22,7 +21,7 @@ export type ProjectDefaults = {
 };
 
 /** Project title, description and classification. Shared by registration and the student dashboard. */
-export default function ProjectFields({ defaults, disabled }: { defaults?: ProjectDefaults; disabled?: boolean }) {
+export default function ProjectFields({ defaults, disabled, categories }: { defaults?: ProjectDefaults; disabled?: boolean; categories: string[] }) {
   const [description, setDescription] = useState(defaults?.description ?? "");
   const [domains, setDomains] = useState<string[]>(defaults?.domains ?? []);
   const [focus, setFocus] = useState(defaults?.focus ?? "");
@@ -116,12 +115,12 @@ export default function ProjectFields({ defaults, disabled }: { defaults?: Proje
 
       <FormField
         name="focus"
-        label="Primary real-world focus: what problem or scientific objective does your work address?"
+        label="Project category"
         required
       >
         <Select name="focus" required value={focus} onChange={(e) => setFocus(e.target.value)} disabled={disabled}>
           <option value="">Select a focus...</option>
-          {FOCUSES.map((f) => (
+          {categories.map((f) => (
             <option key={f} value={f}>
               {f === "Other" ? "Other (please specify)" : f}
             </option>

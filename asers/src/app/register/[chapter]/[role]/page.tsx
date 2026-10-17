@@ -78,6 +78,7 @@ export default async function RegisterFormPage({ params }: Props) {
         contactEmail={chapter.email}
         user={accountUser}
         schools={schools.map((s) => ({ id: s.id, name: s.name, town: s.town }))}
+        categories={chapter.categories}
       />
     );
   } else if (role === "sra") {

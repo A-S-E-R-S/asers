@@ -29,7 +29,6 @@ import {
   DESCRIPTION_MAX_WORDS,
   DOMAINS,
   EMPLOYMENT_STATUSES,
-  FOCUSES,
   GRADES,
   MAX_DOMAINS,
   METHODS,
@@ -250,7 +249,7 @@ export async function registerStudentAction(_prev: ActionState, fd: FormData): P
   if (methods.length === 0 || !methods.every((m) => METHODS.includes(m))) {
     errors.methods = "Select at least one experimental methodology.";
   }
-  if (!(FOCUSES as readonly string[]).includes(focus)) errors.focus = "Select a primary real-world focus.";
+  if (!chapter.categories.includes(focus)) errors.focus = "Select a valid project category.";
   else if (focus === "Other" && !focusOther) errors.focusOther = "Describe the real-world focus.";
 
   // Team partner

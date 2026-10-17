@@ -539,6 +539,27 @@ export async function updateRegistrationSettingsAction(_prev: ActionState, fd: F
   return { message: "Registration settings saved." };
 }
 
+export async function updateChapterCategoriesAction(_prev: ActionState, fd: FormData): Promise<ActionState> {
+  const ctx = await chapterAdmin(fd);
+  if (!ctx) return DENIED;
+  const categories = [...new Set(
+    text(fd, "categories", 5000)
+      .split("\n")
+      .map((category) => category.trim())
+      .filter(Boolean)
+  )].slice(0, 30);
+  await run(
+    "UPDATE chapters SET categories = ?, updated_at = CURRENT_TIMESTAMP WHERE slug = ?",
+    JSON.stringify(categories),
+    ctx.slug
+  );
+  await audit(ctx.user.id, ctx.slug, "chapter.categories");
+  revalidatePath(`/admin/${ctx.slug}/categories`);
+  revalidatePath(`/register/${ctx.slug}/student`);
+  revalidatePath(`/dashboard/${ctx.slug}`);
+  return { message: categories.length ? "Project categories saved." : "Categories cleared; the national defaults are now used." };
+}
+
 // ================================================================ national: chapters
 
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;

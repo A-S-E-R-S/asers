@@ -110,7 +110,7 @@ export default async function StudentDashboard({
           {editable ? (
             <ActionForm action={updateProjectAction} className="space-y-6">
               <input type="hidden" name="chapter" value={chapter.slug} />
-              <ProjectFields defaults={project} />
+              <ProjectFields defaults={project} categories={chapter.categories} />
               <SubmitButton>Save project</SubmitButton>
               {project.isTeam && (
                 <p className="text-xs font-light text-ink-soft">Changes apply to your whole team.</p>

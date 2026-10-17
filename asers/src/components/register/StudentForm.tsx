@@ -25,12 +25,14 @@ export default function StudentForm({
   contactEmail,
   user,
   schools,
+  categories,
 }: {
   chapterSlug: string;
   chapterShortName: string;
   contactEmail: string | null;
   user: AccountUser;
   schools: { id: string; name: string; town: string }[];
+  categories: string[];
 }) {
   const [isTeam, setIsTeam] = useState(false);
 
@@ -147,7 +149,7 @@ export default function StudentForm({
       </Section>
 
       <Section title="Project">
-        <ProjectFields />
+        <ProjectFields categories={categories} />
       </Section>
 
       <div className="border-t-2 border-brand-pale pt-6">

@@ -12,6 +12,7 @@ export type ChapterRow = {
   about: string;
   local_rules: string;
   photos: string;
+  categories: string;
   announcement: string;
   site: string | null;
   contact_email: string | null;
@@ -43,6 +44,7 @@ export type Chapter = {
   about: string;
   localRules: string;
   photos: ChapterPhoto[];
+  categories: string[];
   announcement: string;
   site: string | null;
   email: string | null;
@@ -71,6 +73,19 @@ export function toChapter(r: ChapterRow): Chapter {
     photos: parseJSON<ChapterPhoto[]>(r.photos, []).filter(
       (photo) => !!photo && typeof photo.src === "string" && typeof photo.caption === "string"
     ),
+    categories: parseJSON<string[]>(r.categories, []).filter((category) => typeof category === "string" && category.trim()).length
+      ? parseJSON<string[]>(r.categories, []).filter((category) => typeof category === "string" && category.trim())
+      : [
+          "Healthcare / Disease",
+          "Environmental Sustainability / Climate",
+          "Energy Systems",
+          "Agriculture / Food Systems",
+          "Infrastructure / Engineering Systems",
+          "Accessibility / Assistive Technology",
+          "Education",
+          "Public Safety / Cybersecurity",
+          "Other",
+        ],
     announcement: r.announcement,
     site: r.site,
     email: r.contact_email,

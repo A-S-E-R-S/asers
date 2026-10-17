@@ -17,7 +17,6 @@ import { type ActionState, bool, isEmail, isPhone, list, str, text } from "@/lib
 import {
   DESCRIPTION_MAX_WORDS,
   DOMAINS,
-  FOCUSES,
   MAX_DOMAINS,
   METHODS,
   ROLE_LABELS,
@@ -69,7 +68,7 @@ export async function updateProjectAction(_prev: ActionState, fd: FormData): Pro
   if (methods.length === 0 || !methods.every((m) => METHODS.includes(m))) {
     errors.methods = "Select at least one methodology.";
   }
-  if (!(FOCUSES as readonly string[]).includes(focus)) errors.focus = "Select a primary real-world focus.";
+  if (!chapter.categories.includes(focus)) errors.focus = "Select a valid project category.";
   else if (focus === "Other" && !focusOther) errors.focusOther = "Describe the real-world focus.";
   if (Object.keys(errors).length) return { error: "Please fix the highlighted fields.", fieldErrors: errors };
 

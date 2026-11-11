@@ -33,19 +33,13 @@ export default function AboutPage() {
       <section id="mission" className="mt-12 scroll-mt-8 border-2 border-brand bg-strip p-6 sm:p-8">
         <p className="font-condensed text-lg uppercase tracking-tight text-brand">Our mission</p>
         <p className="mt-3 text-[19px] font-light leading-[1.7]">
-          Our mission is to provide high school students throughout the United States
-          with a comprehensive research competition experience. We believe that every
-          student who has conducted meaningful experimental research deserves the
-          opportunity to present their work, defend their methodology, and learn from
-          STEM professionals.
-        </p>
-        <p className="mt-4 text-[19px] font-light leading-[1.7]">
-          ASERS offers competition, education, mentorship, and community building
-          among young researchers. Through oral presentations, category-based judging,
-          poster sessions, and special awards, we foster scientific communication and
-          celebrate the innovative research being conducted by American high school
-          students. We are committed to making this competition accessible, fair, and
-          educational for all participants.
+          ASERS is a nonprofit organization dedicated to expanding access to research
+          opportunities for high school students across the United States. Through
+          student research competitions, poster presentations, professional judging,
+          and educational workshops, ASERS helps young researchers develop scientific
+          communication skills, receive expert feedback, and connect with STEM
+          professionals. Our mission is to make student research more accessible,
+          equitable, and educational for all participants.
         </p>
       </section>
 

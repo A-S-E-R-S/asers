@@ -78,7 +78,7 @@ export default async function Footer() {
         </div>
       </div>
       <div className="border-t border-white/20 py-4 text-center text-xs text-brand-pale">
-        © {new Date().getFullYear()} American Science and Engineering Research Symposium
+        © {new Date().getFullYear()} American Science and Engineering Research Symposium · 501(c)(3) public charity · EIN 42-4737346
       </div>
     </footer>
   );

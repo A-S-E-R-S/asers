@@ -30,6 +30,52 @@ export default function AboutPage() {
         detailed feedback, and compete for recognition.
       </p>
 
+      <section id="mission" className="mt-12 scroll-mt-8 border-2 border-brand bg-strip p-6 sm:p-8">
+        <p className="font-condensed text-lg uppercase tracking-tight text-brand">Our mission</p>
+        <p className="mt-3 text-[19px] font-light leading-[1.7]">
+          Our mission is to provide high school students throughout the United States
+          with a comprehensive research competition experience. We believe that every
+          student who has conducted meaningful experimental research deserves the
+          opportunity to present their work, defend their methodology, and learn from
+          STEM professionals.
+        </p>
+        <p className="mt-4 text-[19px] font-light leading-[1.7]">
+          ASERS offers competition, education, mentorship, and community building
+          among young researchers. Through oral presentations, category-based judging,
+          poster sessions, and special awards, we foster scientific communication and
+          celebrate the innovative research being conducted by American high school
+          students. We are committed to making this competition accessible, fair, and
+          educational for all participants.
+        </p>
+      </section>
+
+      <section className="mt-12 border-y-2 border-brand-pale py-6">
+        <h2 className="text-2xl font-bold tracking-[-0.015em]">Nonprofit status</h2>
+        <p className="mt-3 font-light leading-[1.6]">
+          American Science and Engineering Research Symposium is recognized by the
+          Internal Revenue Service as a tax-exempt 501(c)(3) public charity. Donations
+          may be tax-deductible as permitted by law.
+        </p>
+        <dl className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
+          <div>
+            <dt className="font-medium text-brand">Employer Identification Number</dt>
+            <dd className="mt-1 font-light">42-4737346</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-brand">Service area</dt>
+            <dd className="mt-1 font-light">High school students throughout the United States</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-brand">Mailing address</dt>
+            <dd className="mt-1 font-light">82 Great Oak Drive<br />Short Hills, NJ 07078-3428</dd>
+          </div>
+        </dl>
+        <p className="mt-5 text-sm font-light leading-[1.6]">
+          For official correspondence, legal notices, or nonprofit documentation,
+          contact <a className="font-medium text-brand underline" href="mailto:contact@asers.org">contact@asers.org</a>.
+        </p>
+      </section>
+
       <h2 className="mt-12 text-2xl font-bold tracking-[-0.015em]">Our story</h2>
       <p className="mt-3 font-light leading-[1.6]">
         ASERS began with the New Jersey Science Research Symposium in 2026, after the

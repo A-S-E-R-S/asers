@@ -4,7 +4,7 @@ import { getAdminScope, getCurrentUser, isAnyAdmin } from "@/lib/auth";
 
 const navLinks = [
   { href: "/chapters", label: "Chapters" },
-  { href: "/national-symposium", label: "Nationals" },
+  // Temporarily hidden while Nationals is paused for this year.
   { href: "/judging", label: "Judging" },
   { href: "/donate", label: "Donate" },
   { href: "/about", label: "About" },

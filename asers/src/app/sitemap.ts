@@ -7,7 +7,7 @@ const routes = [
   "/competition",
   "/competition/rules",
   "/judging",
-  "/national-symposium",
+  // Temporarily hidden while Nationals is paused for this year.
   "/chapters",
   "/register",
   "/donate",

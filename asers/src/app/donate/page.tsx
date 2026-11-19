@@ -46,6 +46,7 @@ export default async function DonatePage() {
           </div>
         ))}
       </div>
+      {/* Temporarily hidden while Nationals is paused for this year.
       <section className="mt-8 border-2 border-brand bg-brand px-6 py-7 text-white">
           <p className="font-condensed text-2xl uppercase tracking-wide">Help students get to Nationals</p>
         <p className="mt-3 font-light leading-[1.7] text-brand-pale">
@@ -57,12 +58,13 @@ export default async function DonatePage() {
           Ask about supporting Nationals
         </a>
       </section>
+      */}
 
       <h2 id="impact" className="mt-12 scroll-mt-8 text-2xl font-bold tracking-[-0.015em]">Examples of impact</h2>
       <div className="mt-5 grid gap-3 sm:grid-cols-2">
         {[
           ["$50", "can help cover a student's poster or event materials."],
-          ["$250", "can help subsidize a finalist's travel to the National Symposium."],
+          // Temporarily hidden while Nationals is paused for this year.
           ["$500", "can support awards or operating costs for a regional symposium."],
           ["$1,000+", "can help launch or expand an ASERS chapter."],
         ].map(([amount, impact]) => (

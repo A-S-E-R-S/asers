@@ -75,7 +75,7 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* National symposium */}
+      {/* Temporarily hidden while Nationals is paused for this year.
       <section className="bg-strip">
         <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_auto]">
           <div>
@@ -86,6 +86,7 @@ export default async function Home() {
           <Link href="/national-symposium" className="whitespace-nowrap bg-brand px-[22px] py-[12px] font-condensed text-[22px] uppercase tracking-tight text-white transition hover:bg-brand-dark">Explore Nationals</Link>
         </div>
       </section>
+      */}
 
       {/* What is ASERS */}
       <section className="mx-auto max-w-6xl px-4 py-20 sm:px-6">
